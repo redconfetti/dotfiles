@@ -21,7 +21,7 @@ See the [Rakefile](./Rakefile) to inspect the installation script.
 
 After installing, open a new terminal window to see the effects.
 
-```terminal
+``` shell
 git clone git://github.com/ryanb/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 rake install
@@ -30,3 +30,11 @@ rake install
 ### Machine Specific Configuration
 
 If you need aliases that are specific to your machine, place them in `.profile`.
+
+## Homebrew
+
+See [Brewfile - a Gemfile but for Homebrew](https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew)
+
+``` shell
+brew bundle
+```
