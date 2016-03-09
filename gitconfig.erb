@@ -1,0 +1,16 @@
+[core]
+  excludesfile = <%= ENV['HOME'] %>/.gitignore
+  editor = subl -n -w
+[push]
+  default = simple
+[user]
+  name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
+  email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[alias]
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short

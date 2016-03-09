@@ -15,7 +15,9 @@ I might want to steal something from these other examples eventually. For now I'
 
 ## Installation
 
-Clone the repository to `~/.dotfiles`, then run `rake install`. See the [Rakefile](./Rakefile) to inspect the installation script.
+Clone the repository to `~/.dotfiles`, then run `rake install`. You will be prompted at each step to ensure that your current configuration is not destroyed.
+
+See the [Rakefile](./Rakefile) to inspect the installation script.
 
 After installing, open a new terminal window to see the effects.
 
@@ -25,3 +27,6 @@ cd ~/.dotfiles
 rake install
 ```
 
+### Machine Specific Configuration
+
+If you need aliases that are specific to your machine, place them in `.profile`.
