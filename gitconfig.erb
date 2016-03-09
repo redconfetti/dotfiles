@@ -14,3 +14,9 @@
   branch = auto
 [alias]
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[include]
+  path = ~/.gitconfig_local
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
