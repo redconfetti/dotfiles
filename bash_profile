@@ -10,3 +10,13 @@ function rubymine() { /Applications/RubyMine.app/Contents/MacOS/rubymine $(pwd) 
 
 # Coloring
 PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
+
+# Use Sublime as Editor
+export EDITOR="subl -n -w"
+
+# Aliases
+alias rspec="bundle exec rspec --format documentation"
+alias flushmem="echo 'flush_all' | nc localhost 11211"
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
