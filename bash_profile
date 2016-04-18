@@ -20,3 +20,8 @@ alias flushmem="echo 'flush_all' | nc localhost 11211"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+ulimit -n 65536 65536
+
