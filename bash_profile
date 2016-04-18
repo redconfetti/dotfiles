@@ -21,7 +21,12 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# iTerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
+# Ulimit
 ulimit -n 65536 65536
 
+# User specific environment and startup programs
+PATH=$HOME/bin:$PATH
+export PATH
