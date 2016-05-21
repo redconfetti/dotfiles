@@ -30,3 +30,8 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 # User specific environment and startup programs
 PATH=$HOME/bin:$PATH
 export PATH
+
+# Docker Machine
+if [ -x /usr/local/bin/docker-machine ]; then
+  eval $(docker-machine env default)
+fi
