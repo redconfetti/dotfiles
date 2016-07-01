@@ -102,3 +102,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Use Sublime as Editor
 export EDITOR="subl -n -w"
+
+# Homepage for Web Browsers
+export WWW_HOME=http://www.google.com/
