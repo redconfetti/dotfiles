@@ -19,6 +19,7 @@ alias flushmem="echo 'flush_all' | nc localhost 11211"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias gemdir='cd $(rvm gemset gemdir)'
 
 # iTerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
@@ -31,6 +32,6 @@ PATH=$HOME/bin:$PATH
 export PATH
 
 # Docker Machine
-if [ -x /usr/local/bin/docker-machine ]; then
-  eval $(docker-machine env default)
-fi
+# if [ -x /usr/local/bin/docker-machine ]; then
+#   eval $(docker-machine env default)
+# fi
