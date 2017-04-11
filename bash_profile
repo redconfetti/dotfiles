@@ -13,13 +13,18 @@ export TERM="xterm-color"
 # PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w\[\e[0m\]\$ '
 export PS1="\[$(tput bold)\]\[$(tput setaf 2)\][\[$(tput setaf 1)\]\u\[$(tput setaf 0)\]@\[$(tput setaf 1)\]\h \[$(tput setaf 2)\]\W\[$(tput setaf 2)\]]\\$ \[$(tput sgr0)\]"
 
+# export JRUBY_OPTS="--dev"
+export JRUBY_OPTS="--dev -Xcext.enabled=true -J-XX:+UseConcMarkSweepGC -J-XX:+CMSPermGenSweepingEnabled -J-XX:+CMSClassUnloadingEnabled -J-XX:MaxPermSize=1024m"
+
 # Aliases
 alias rspec="bundle exec rspec --format documentation"
 alias flushmem="echo 'flush_all' | nc localhost 11211"
+alias statsmem="echo 'stats' | nc 127.0.0.1 11211"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias gemdir='cd $(rvm gemset gemdir)'
+alias tbr="bundle exec torquebox run -p=3000"
 
 # iTerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
