@@ -22,7 +22,7 @@ See the [Rakefile](./Rakefile) to inspect the installation script.
 After installing, open a new terminal window to see the effects.
 
 ``` shell
-git clone git://github.com/ryanb/dotfiles ~/.dotfiles
+git clone git://github.com/redconfetti/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 rake install
 ```
