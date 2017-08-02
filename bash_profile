@@ -14,9 +14,9 @@ export TERM="xterm-color"
 export PS1="\[$(tput bold)\]\[$(tput setaf 2)\][\[$(tput setaf 1)\]\u\[$(tput setaf 0)\]@\[$(tput setaf 1)\]\h \[$(tput setaf 2)\]\W\[$(tput setaf 2)\]]\\$ \[$(tput sgr0)\]"
 
 # export JRUBY_OPTS="--dev"
-# export JRUBY_OPTS="--dev -Xcext.enabled=true -X-C -J-Xms900m -J-Xmx1200m -J-XX:MaxPermSize=1024m --headless -J-XX:+UseConcMarkSweepGC -J-XX:+CMSPermGenSweepingEnabled -J-XX:+CMSClassUnloadingEnabled"
+# export JRUBY_OPTS="--dev -X-C -J-Xms900m -J-Xmx1200m -J-XX:MaxPermSize=1024m --headless -J-XX:+UseConcMarkSweepGC -J-XX:+CMSPermGenSweepingEnabled -J-XX:+CMSClassUnloadingEnabled"
 # -J-Djruby.openssl.debug=true
-export JRUBY_OPTS="--dev -Xcext.enabled=true -X-C -J-Xms900m -J-Xmx1200m -J-XX:MaxPermSize=1024m --headless -J-XX:+UseConcMarkSweepGC -J-XX:+CMSPermGenSweepingEnabled -J-XX:+CMSClassUnloadingEnabled -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -J-Xcompile.invokedynamic=false -J-Djava.net.preferIPv4Stack=true"
+export JRUBY_OPTS="--dev -X-C -J-Xms900m -J-Xmx1200m -J-XX:MaxPermSize=1024m --headless -J-XX:+UseConcMarkSweepGC -J-XX:+CMSPermGenSweepingEnabled -J-XX:+CMSClassUnloadingEnabled -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -J-Xcompile.invokedynamic=false -J-Djava.net.preferIPv4Stack=true"
 
 # Aliases
 alias rspec="bundle exec rspec --format documentation"
