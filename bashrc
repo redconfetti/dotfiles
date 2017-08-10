@@ -59,9 +59,6 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# Coloring
-# PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
-
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
