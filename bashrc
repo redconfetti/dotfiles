@@ -95,7 +95,10 @@ export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Use Sublime as Editor
-export EDITOR="subl -n -w"
+# export EDITOR="subl -n -w"
+
+# Use VSCode as Editor
+export EDITOR="code --wait"
 
 # Homepage for Web Browsers
 export WWW_HOME=http://www.google.com/

@@ -3,3 +3,4 @@
 
 # Use Sublime as Editor
 # export EDITOR="subl -n -w"
+# export EDITOR="code --wait"

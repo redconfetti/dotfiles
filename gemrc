@@ -1,9 +1,10 @@
 ---
 # See http://docs.ruby-lang.org/en/2.1.0/Gem/ConfigFile.html
-:verbose: true
-gem: --no-ri --no-rdoc
-:update_sources: true
+:backtrace: false
+:bulk_threshold: 1000
 :sources:
 - http://rubygems.org/
-:backtrace: false
-:benchmark: false
+:update_sources: true
+:verbose: true
+gem: "--no-ri --no-rdoc --document=yri"
+benchmark: false
