@@ -2,9 +2,6 @@
 # Place your machine specific configurations in this file
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
-# Load RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 # Load Bash Aliases
 [[ -s "$HOME/.bash_aliases" ]] && source "$HOME/.bash_aliases"
 
@@ -22,9 +19,6 @@ export PS1="\[$(tput bold)\]\[$(tput setaf 2)\][\[$(tput setaf 1)\]\u\[$(tput se
 # iTerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
-# Ulimit
-# ulimit -n 65536 65536
-
 # User specific environment and startup programs
 PATH=$HOME/bin:$PATH
 export PATH
@@ -33,3 +27,7 @@ export PATH
 # if [ -x /usr/local/bin/docker-machine ]; then
 #   eval $(docker-machine env default)
 # fi
+
+# Load RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
