@@ -1,2 +1,4 @@
 --color
 --format documentation
+--require ~/ruby/say_helper.rb
+
