@@ -2,6 +2,9 @@
 # Place your machine specific configurations in this file
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
+# Load .bashrc
+[[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
+
 # Load Bash Aliases
 [[ -s "$HOME/.bash_aliases" ]] && source "$HOME/.bash_aliases"
 
