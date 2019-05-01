@@ -1,0 +1,14 @@
+source $HOME/.nvm/nvm.sh
+
+# load nvm
+export NVM_DIR="$HOME/.nvm"
+[ "$BASH_VERSION" ] && npm() { 
+  # hack: avoid slow npm sanity check in nvm
+  if [ "$*" == "config get prefix" ]; then which node | sed "s/bin\/node//"; 
+  else $(which npm) "$@"; fi 
+}
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+rvm_silence_path_mismatch_check_flag=1 # prevent rvm complaints that nvm is first in PATH
+unset npm # end hack
+
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

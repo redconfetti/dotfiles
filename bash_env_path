@@ -1,0 +1,8 @@
+# set PATH so it includes user's .local/bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+  PATH="$PATH:$HOME/.local/bin"
+fi
+
+# User specific environment and startup programs
+[[ -d "$HOME/.local/bin" ]] && PATH="$PATH:$HOME/.local/bin"
+[[ -d "$HOME/bin" ]] && PATH="$PATH:$HOME/bin"

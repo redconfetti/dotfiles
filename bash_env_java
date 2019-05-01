@@ -5,4 +5,5 @@
 export JRUBY_OPTS="--dev -X-C -J-Xms900m -J-Xmx1200m --headless -J-XX:+UseConcMarkSweepGC -J-XX:+CMSClassUnloadingEnabled -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -J-Xcompile.invokedynamic=false -J-Djava.net.preferIPv4Stack=true -J-Djruby.openssl.x509.lookup.cache=8 -J-Djruby.thread.pool.enabled=true -J-Djava.io.tmpdir=${PWD}/tmp"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
 
-JVM_OPTS="\-server \-verbose:gc \-Xmn500m \-Xms3000m \-Xmx3000m \-XX:+CMSParallelRemarkEnabled \-XX:+CMSScavengeBeforeRemark \-XX:+PrintGCCause \-XX:+PrintGCDateStamps \-XX:+PrintGCDetails \-XX:+ScavengeBeforeFullGC \-XX:+UseCMSInitiatingOccupancyOnly \-XX:+UseCodeCacheFlushing \-XX:+UseConcMarkSweepGC \-XX:CMSInitiatingOccupancyFraction=70 \-XX:MaxMetaspaceSize=1024m \-XX:ReservedCodeCacheSize=256m"
+JVM_OPTS="\-server \-verbose:gc \-Xmn500m \-Xms3000m \-Xmx3000m \-XX:+CMSParallelRemarkEnabled \-XX:+CMSScavengeBeforeRemark \-XX:+PrintGCCause \-XX:+PrintGCDateStamps \-XX:+PrintGCDetails \-XX:+ScavengeBeforeFullGC \-XX:+UseCMSInitiatingOccupancyOnly \-XX:+UseCodeCacheFlushing \-XX:+UseConcMarkSweepGC \-XX:CMSInitiatingOccupancyFraction=70 \-XX:ReservedCodeCacheSize=256m \-XX:MaxMetaspaceSize=1024m"
+

@@ -1,0 +1,7 @@
+# Adds local sbin to path
+export PATH="/usr/local/sbin:$PATH"
+
+# Load RVM
+export PATH="$PATH:$HOME/.rvm/bin"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+

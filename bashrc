@@ -1,23 +1,23 @@
 # .bashrc
+# Run with every new window
 
-# Alias definitions.
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
-fi
+# Load Bash Aliases
+[[ -s "$HOME/.bash_aliases" ]] && source "$HOME/.bash_aliases"
 
-# set PATH so it includes user's .local/bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-  PATH="$PATH:$HOME/.local/bin"
-fi
+# Load Bash Path
+[[ -s "$HOME/.bash_env_path" ]] && source "$HOME/.bash_env_path"
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-  PATH="$PATH:$HOME/bin"
-fi
+# Load Java Environment Settings
+[[ -s "$HOME/.bash_env_java" ]] && source "$HOME/.bash_env_java"
 
-# Load RVM
-export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Load Ruby Environment Settings
+[[ -s "$HOME/.bash_env_ruby" ]] && source "$HOME/.bash_env_ruby"
+
+# Load NodeJS Environment Settings
+[[ -s "$HOME/.bash_env_node" ]] && source "$HOME/.bash_env_node"
+
+# Load NodeJS Environment Settings
+# [[ -s "$HOME/.bash_env_cloud9" ]] && source "$HOME/.bash_env_cloud9"
 
 # Use VSCode as Editor
 # export EDITOR="code --wait"
@@ -25,59 +25,31 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Homepage for Web Browsers
 export WWW_HOME=http://www.google.com/
 
-# load nvm
-export NVM_DIR="$HOME/.nvm"
-[ "$BASH_VERSION" ] && npm() { 
-  # hack: avoid slow npm sanity check in nvm
-  if [ "$*" == "config get prefix" ]; then which node | sed "s/bin\/node//"; 
-  else $(which npm) "$@"; fi 
-}
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-rvm_silence_path_mismatch_check_flag=1 # prevent rvm complaints that nvm is first in PATH
-unset npm # end hack
-
 # User specific aliases and functions
 alias python=python27
 
-# modifications needed only in interactive mode
-if [ "$PS1" != "" ]; then
-  # Set default editor for git
-  git config --global core.editor /usr/bin/vim
+# Coloring
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+# PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
+# PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w\[\e[0m\]\$ '
+export PS1="\[$(tput bold)\]\[$(tput setaf 2)\][\[$(tput setaf 1)\]\u\[$(tput setaf 0)\]@\[$(tput setaf 1)\]\h \[$(tput setaf 2)\]\W\[$(tput setaf 2)\]]\\$ \[$(tput sgr0)\]"
 
-  # Turn on checkwinsize
-  shopt -s checkwinsize
+####################################################
+# Linux Only configuration
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  uname -a
+####################################################
+# Mac Only configuration
+elif [[ "$OSTYPE" == "darwin"* ]]; then
 
-  # keep more history
-  shopt -s histappend
-  export HISTSIZE=100000
-  export HISTFILESIZE=100000
-  export PROMPT_COMMAND="history -a;"
+  export TERM="xterm-color"
 
-  # Source for Git PS1 function
-  if ! type -t __git_ps1 && [ -e "/usr/share/git-core/contrib/completion/git-prompt.sh" ]; then
-    . /usr/share/git-core/contrib/completion/git-prompt.sh
-  fi
+  # Configure path to use Homebrew 'make' in addition to 'gmake`
+  PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+  export PATH
 
-  # Cloud9 default prompt
-  _cloud9_prompt_user() {
-    if [ "$C9_USER" = root ]; then
-      echo "$USER"
-    else
-      echo "$C9_USER"
-    fi
-  }
-
-  # enable color support of ls and also add handy aliases
-  if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-  fi
-
-  PS1='\[\033[01;32m\]$(_cloud9_prompt_user)\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (%s)" 2>/dev/null) $ '
+  # iTerm2 Shell Integration
+  test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 fi
+####################################################
