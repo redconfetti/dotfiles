@@ -2,9 +2,6 @@
 # -Xcext.enabled=true
 # -J-XX:MaxPermSize=1024m
 
-# 09/29/17 - Removed the following:
-# -J-XX:+CMSPermGenSweepingEnabled
-
 export JRUBY_OPTS="--dev -X-C -J-Xms900m -J-Xmx1200m --headless -J-XX:+UseConcMarkSweepGC -J-XX:+CMSClassUnloadingEnabled -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -J-Xcompile.invokedynamic=false -J-Djava.net.preferIPv4Stack=true -J-Djruby.openssl.x509.lookup.cache=8 -J-Djruby.thread.pool.enabled=true -J-Djava.io.tmpdir=${PWD}/tmp"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
 
