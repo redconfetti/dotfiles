@@ -6,3 +6,5 @@ fi
 # User specific environment and startup programs
 [[ -d "$HOME/.local/bin" ]] && PATH="$PATH:$HOME/.local/bin"
 [[ -d "$HOME/bin" ]] && PATH="$PATH:$HOME/bin"
+[[ -d "/usr/local/opt/openssl/bin" ]] && PATH="/usr/local/opt/openssl/bin:$PATH"
+

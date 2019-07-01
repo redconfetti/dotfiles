@@ -1,7 +1,12 @@
 # Adds local sbin to path
 export PATH="/usr/local/sbin:$PATH"
 
+# [[ -s "/usr/local/opt/ruby/bin" ]] && export PATH="/usr/local/opt/ruby/bin:$PATH"
+
 # Load RVM
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+alias rspec="bundle exec rspec --format documentation"
+alias gemdir='cd $(rvm gemset gemdir)'
 
