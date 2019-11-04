@@ -1,12 +1,13 @@
-# Adds local sbin to path
-export PATH="/usr/local/sbin:$PATH"
+# Load RBenv
+# eval "$(command rbenv init -)"
 
-# [[ -s "/usr/local/opt/ruby/bin" ]] && export PATH="/usr/local/opt/ruby/bin:$PATH"
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Load RVM
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-alias rspec="bundle exec rspec --format documentation"
+# Aliases
+alias rspec="LOGGER_STDOUT=false bundle exec rspec --format documentation"
 alias gemdir='cd $(rvm gemset gemdir)'
 

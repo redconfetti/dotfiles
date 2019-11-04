@@ -7,6 +7,9 @@
 # Load Bash Path
 [[ -s "$HOME/.bash_env_path" ]] && source "$HOME/.bash_env_path"
 
+# Load Bash Editor
+[[ -s "$HOME/.bash_env_editor" ]] && source "$HOME/.bash_env_editor"
+
 # Load Java Environment Settings
 [[ -s "$HOME/.bash_env_java" ]] && source "$HOME/.bash_env_java"
 
@@ -16,11 +19,8 @@
 # Load NodeJS Environment Settings
 [[ -s "$HOME/.bash_env_node" ]] && source "$HOME/.bash_env_node"
 
-# Load NodeJS Environment Settings
+# Load Cloud9 Environment Settings
 # [[ -s "$HOME/.bash_env_cloud9" ]] && source "$HOME/.bash_env_cloud9"
-
-# Use VSCode as Editor
-# export EDITOR="code --wait"
 
 # Homepage for Web Browsers
 export WWW_HOME=http://www.google.com/
@@ -46,8 +46,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   export TERM="xterm-color"
 
   # Configure path to use Homebrew 'make' in addition to 'gmake`
-  PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
-  export PATH
+  # PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+  # export PATH
 
   # iTerm2 Shell Integration
   test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

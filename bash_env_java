@@ -1,9 +1,34 @@
-# -J-Djruby.openssl.debug=true
-# -Xcext.enabled=true
-# -J-XX:MaxPermSize=1024m
+export JVM_OPTS="\-server \
+\-verbose:gc \
+\-Xmn500m \
+\-Xms3000m \
+\-Xmx3000m \
+\-XX:+CMSParallelRemarkEnabled \
+\-XX:+CMSScavengeBeforeRemark \
+\-XX:+PrintGCCause \
+\-XX:+PrintGCDateStamps \
+\-XX:+PrintGCDetails \
+\-XX:+ScavengeBeforeFullGC \
+\-XX:+UseCMSInitiatingOccupancyOnly \
+\-XX:+UseCodeCacheFlushing \
+\-XX:CMSInitiatingOccupancyFraction=70 \
+\-XX:ReservedCodeCacheSize=256m \
+"
 
-export JRUBY_OPTS="--dev -X-C -J-Xms900m -J-Xmx1200m --headless -J-XX:+UseConcMarkSweepGC -J-XX:+CMSClassUnloadingEnabled -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -J-Xcompile.invokedynamic=false -J-Djava.net.preferIPv4Stack=true -J-Djruby.openssl.x509.lookup.cache=8 -J-Djruby.thread.pool.enabled=true -J-Djava.io.tmpdir=${PWD}/tmp"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
+export JRUBY_OPTS="--dev \
+-X-C \
+-J-Xms900m \
+-J-Xmx2048m \
+--headless \
+-J-XX:+TieredCompilation \
+-J-XX:TieredStopAtLevel=1 \
+-J-XX:+CMSClassUnloadingEnabled \
+-J-Djava.net.preferIPv4Stack=true \
+-J-Djruby.openssl.x509.lookup.cache=8 \
+-J-Djruby.thread.pool.enabled=true \
+-J-Djava.io.tmpdir=${PWD}/tmp \
+"
 
-JVM_OPTS="\-server \-verbose:gc \-Xmn500m \-Xms3000m \-Xmx3000m \-XX:+CMSParallelRemarkEnabled \-XX:+CMSScavengeBeforeRemark \-XX:+PrintGCCause \-XX:+PrintGCDateStamps \-XX:+PrintGCDetails \-XX:+ScavengeBeforeFullGC \-XX:+UseCMSInitiatingOccupancyOnly \-XX:+UseCodeCacheFlushing \-XX:+UseConcMarkSweepGC \-XX:CMSInitiatingOccupancyFraction=70 \-XX:ReservedCodeCacheSize=256m \-XX:MaxMetaspaceSize=1024m"
-
+# -J-Djava.library.path= \
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home"
+# export CLASSPATH="/Users/jasonmiller/java_classes"
