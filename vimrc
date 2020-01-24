@@ -383,9 +383,3 @@ endfunction
 
 " Enable Mouse
 set mouse=a
-
-" Call the .vimrc.plug file
-" https://www.linode.com/docs/tools-reference/tools/introduction-to-vim-customization/
-if filereadable(expand("~/.vimrc.plug"))
-  source ~/.vimrc.plug
-endif
