@@ -17,6 +17,7 @@ export JVM_OPTS="\-server \
 
 export JRUBY_OPTS="--dev \
 -X-C \
+-Xnative.verbose=true \
 -J-Xms900m \
 -J-Xmx2048m \
 --headless \
@@ -26,9 +27,11 @@ export JRUBY_OPTS="--dev \
 -J-Djava.net.preferIPv4Stack=true \
 -J-Djruby.openssl.x509.lookup.cache=8 \
 -J-Djruby.thread.pool.enabled=true \
--J-Djava.io.tmpdir=${PWD}/tmp \
 "
+# Removed to resolve issue with error:
+# NotImplementedError: flock unsupported or native support failed to load; see http://wiki.jruby.org/Native-Libraries
+# -J-Djava.io.tmpdir=${PWD}/tmp \
 
 # -J-Djava.library.path= \
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home"
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home"
 # export CLASSPATH="/Users/jasonmiller/java_classes"
