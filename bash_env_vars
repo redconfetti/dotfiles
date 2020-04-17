@@ -1,0 +1,1 @@
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.google_access_dev_qa.json"

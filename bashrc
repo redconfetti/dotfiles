@@ -4,6 +4,9 @@
 # Load Bash Aliases
 [[ -s "$HOME/.bash_aliases" ]] && source "$HOME/.bash_aliases"
 
+# Load Bash Environment variables
+[[ -s "$HOME/.bash_env_vars" ]] && source "$HOME/.bash_env_vars"
+
 # Load Bash Path
 [[ -s "$HOME/.bash_env_path" ]] && source "$HOME/.bash_env_path"
 
