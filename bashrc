@@ -34,8 +34,6 @@ alias python=python27
 # Coloring
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-# PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
-# PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w\[\e[0m\]\$ '
 export PS1="\[$(tput bold)\]\[$(tput setaf 2)\][\[$(tput setaf 1)\]\u\[$(tput setaf 0)\]@\[$(tput setaf 1)\]\h \[$(tput setaf 2)\]\W\[$(tput setaf 2)\]]\\$ \[$(tput sgr0)\]"
 
 ####################################################

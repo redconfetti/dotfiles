@@ -1,0 +1,110 @@
+# See https://github.com/jruby/jruby/wiki/JRuby-Options
+# Run "jruby --properties" to see supported options
+
+################################################################################
+# debugging and logging
+################################################################################
+
+# Set whether full traces are enabled (c-call/c-return).
+# Options: [true, false], Default: false.
+
+debug.fullTrace=true
+
+# Log externally-launched processes.
+# Options: [true, false], Default: false.
+
+#debug.launch=false
+
+# Log require/load file searches.
+# Options: [true, false], Default: false.
+
+#debug.loadService=false
+
+# Log require/load parse+evaluate times.
+# Options: [true, false], Default: false.
+
+#debug.loadService.timing=false
+
+# disables JRuby impl script loads and prints parse exceptions
+# Options: [true, false], Default: false.
+
+#debug.parser=false
+
+# Print which script is executed by '-S' flag.
+# Options: [true, false], Default: false.
+
+#debug.scriptResolution=false
+
+# Dump class + instance var names on first new of Object subclasses.
+# Options: [true, false], Default: false.
+
+#dump.variables=false
+
+# Generate backtraces for heavily-used Errno exceptions (EAGAIN).
+# Options: [true, false], Default: false.
+
+#errno.backtrace=true
+
+# Log every time an exception backtrace is generated.
+# Options: [true, false], Default: false.
+
+#log.backtraces=false
+
+# Log every time a Kernel#caller backtrace is generated.
+# Options: [true, false], Default: false.
+
+#log.callers=false
+
+# Log every time an exception is constructed.
+# Options: [true, false], Default: false.
+
+#log.exceptions=false
+
+# Log every time a singleton class is created.
+# Options: [true, false], Default: false.
+
+#log.singletons=false
+
+# Log a stack trace every time a singleton class is created.
+# Options: [true, false], Default: false.
+
+#log.singletons.verbose=false
+
+# Log every time a built-in warning backtrace is generated.
+# Options: [true, false], Default: false.
+
+#log.warnings=false
+
+# Use specified class for logging.
+# Options: [class name], Default: org.jruby.util.log.StandardErrorLogger.
+
+#logger.class=org.jruby.util.log.StandardErrorLogger
+
+# Rewrite stack traces from exceptions raised in Java calls.
+# Options: [true, false], Default: true.
+
+#rewrite.java.trace=true
+
+# Generate backtraces for heavily-used Errno exceptions (EAGAIN).
+# Options: [true, false], Default: false.
+
+#stop_iteration.backtrace=false
+
+################################################################################
+# miscellaneous
+################################################################################
+
+# Enable colorized backtraces.
+# Options: [true, false], Default: false.
+
+backtrace.color=true
+
+# Mask .java lines in Ruby backtraces.
+# Options: [true, false], Default: false.
+
+# backtrace.mask=false
+
+# Set the style of exception backtraces.
+# Options: [normal, raw, full, mri], Default: normal.
+
+backtrace.style=mri

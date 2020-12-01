@@ -35,3 +35,5 @@ export JRUBY_OPTS="--dev \
 # -J-Djava.library.path= \
 # export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home"
 # export CLASSPATH="/Users/jasonmiller/java_classes"
+
+# export JAVA_HOME="/usr/lib/jvm/jre"
