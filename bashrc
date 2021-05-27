@@ -10,9 +10,6 @@
 # Load Bash Path
 [[ -s "$HOME/.bash_env_path" ]] && source "$HOME/.bash_env_path"
 
-# Load Bash Editor
-[[ -s "$HOME/.bash_env_editor" ]] && source "$HOME/.bash_env_editor"
-
 # Load Java Environment Settings
 [[ -s "$HOME/.bash_env_java" ]] && source "$HOME/.bash_env_java"
 

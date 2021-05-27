@@ -1,8 +1,3 @@
-# Add Julia to path
-if [ -d "/Applications/Julia-1.2.app/Contents/Resources/julia/bin" ] ; then
-  PATH="$PATH:/Applications/Julia-1.2.app/Contents/Resources/julia/bin"
-fi
-
 # User specific environment and startup programs
 [[ -d "$HOME/bin" ]] && PATH="$PATH:$HOME/bin"
 [[ -d "$HOME/.local/bin" ]] && PATH="$PATH:$HOME/.local/bin"

@@ -1,2 +1,0 @@
-# Use VSCode as Editor
-export EDITOR="code --wait"
