@@ -7,3 +7,9 @@ alias l='ls -CF'
 alias be='bundle exec'
 alias statsmem="echo 'stats' | nc 127.0.0.1 11211"
 alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
+
+# exa
+alias ls='exa -gbH --header --git'
+
+# bat
+alias cat='bat'
