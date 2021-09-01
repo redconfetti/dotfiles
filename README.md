@@ -39,6 +39,34 @@ See [Brewfile - a Gemfile but for Homebrew](https://robots.thoughtbot.com/brewfi
 brew bundle
 ```
 
+## Features
+
+* Segregation of Bash environment configurations:
+  * Aliases
+  * Variables
+  * Path
+  * Ruby
+  * Java / JVM / jRuby
+  * NodeJS
+  * Cloud9
+* Customizations
+  * [Starship] shell prompt
+  * [Exa] replacement for Ls, featuring more color and Git aware
+  * [TLDR] cheatsheets for console commands
+  * [Bat] replacement for Cat, featuring syntax highlighting and Git integration
+* Other
+  * Rspec - Color output and 'documentation' formatting output
+  * Git - Ignore thumbnail database files for Mac (.DS_Store) and Windows
+    (Thumbs.db)
+  * [Imgcat script] for [iTerm2]
+
+[Starship]: https://starship.rs/
+[Exa]: https://the.exa.website/
+[TLDR]: https://github.com/tldr-pages/tldr
+[Bat]: https://github.com/sharkdp/bat
+[Imgcat script]: https://iterm2.com/documentation-images.html
+[iTerm2]: https://iterm2.com/index.html
+
 ## Vim
 
 Intend to update with Vim configuration.
