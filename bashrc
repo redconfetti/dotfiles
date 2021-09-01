@@ -17,7 +17,7 @@
 [[ -s "$HOME/.bash_env_ruby" ]] && source "$HOME/.bash_env_ruby"
 
 # Load NodeJS Environment Settings
-# [[ -s "$HOME/.bash_env_node" ]] && source "$HOME/.bash_env_node"
+[[ -s "$HOME/.bash_env_node" ]] && source "$HOME/.bash_env_node"
 
 # Load Misc
 # [[ -s "$HOME/.bash_env_misc" ]] && source "$HOME/.bash_env_misc"
