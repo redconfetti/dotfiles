@@ -1,0 +1,66 @@
+# format = """
+# $username\
+# $hostname\
+# $shlvl\
+# $directory\
+# $git_branch\
+# $git_commit\
+# $git_state\
+# $git_metrics\
+# $git_status\
+# $hg_branch\
+# $vagrant\
+# $nix_shell\
+# $memory_usage\
+# $env_var\
+# $custom\
+# $cmd_duration\
+# $line_break\
+# $jobs\
+# $battery\
+# $time\
+# $status\
+# $shell\
+# $character"""
+
+# $package\
+# $ruby\
+# $nodejs\
+
+format = """
+[┌─────────────────────────────────────](bold red)
+[│](bold red)$directory$git_branch$time
+[└─>](bold red) """
+
+[git_branch]
+symbol = " "
+style	= "bold blue"
+
+# [git_metrics]
+# added_style = "underline blue"
+# format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+# [shlvl]
+# disabled = false
+
+[directory]
+truncation_length = 16
+truncation_symbol = "…/"
+style	= "green"
+read_only_style = "bold red"
+truncate_to_repo = false
+
+[time]
+disabled = false
+use_12hr = true
+# format = '🕙[\[ $time \]]($style) '
+# https://docs.rs/chrono/0.4.7/chrono/format/strftime/index.html
+time_format = '%D %I:%M:%S %p'
+format = "[$time]($style) "
+
+[username]
+style_user = "red bold"
+style_root = "black bold"
+format = "[$user]($style) "
+disabled = true
+show_always = true
