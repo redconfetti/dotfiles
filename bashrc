@@ -49,6 +49,11 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 # Mac Only configuration
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 
+  # Suppress Mac OSX default shell notice
+  # Change to Bash using:
+  #   chsh -s /bin/bash
+  export BASH_SILENCE_DEPRECATION_WARNING=1
+
   export TERM="xterm-color"
 
   # Configure path to use Homebrew 'make' in addition to 'gmake`
