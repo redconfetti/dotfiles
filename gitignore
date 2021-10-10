@@ -1,2 +1,6 @@
 .DS_Store
 Thumbs.db
+
+config/configstore
+config/gatsby
+config/iterm2
