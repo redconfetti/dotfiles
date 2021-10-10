@@ -19,9 +19,6 @@
 # Load NodeJS Environment Settings
 [[ -s "$HOME/.bash_env_node" ]] && source "$HOME/.bash_env_node"
 
-# Load Misc
-# [[ -s "$HOME/.bash_env_misc" ]] && source "$HOME/.bash_env_misc"
-
 # Load Cloud9 Environment Settings
 # [[ -s "$HOME/.bash_env_cloud9" ]] && source "$HOME/.bash_env_cloud9"
 
