@@ -27,6 +27,15 @@ cd ~/.dotfiles
 rake install
 ```
 
+### Starship
+
+Download and install [Cousine Nerd Font](https://www.nerdfonts.com/font-downloads) for Starship support.
+In iTerm, go to Preferences > Profiles > Text tab, and choose 'Cousine Nerd Font Mono'
+under the 'Font' settings.
+
+In VSCode, go to Preferences > Settings, and under "Editor: Font Family" set
+it to use `Cousine Nerd Font Mono, Menlo, Monaco, 'Courier New', monospace`.
+
 ### Machine Specific Configuration
 
 If you need aliases that are specific to your machine, place them in `.profile`.

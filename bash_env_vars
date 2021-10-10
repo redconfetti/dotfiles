@@ -1,2 +1,4 @@
 # Use VSCode as Editor
-export EDITOR="code --wait"
+if [ -x /usr/local/bin/code ]; then
+  export EDITOR="code --wait"
+fi
