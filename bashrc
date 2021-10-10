@@ -33,8 +33,13 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export PS1="\[$(tput bold)\]\[$(tput setaf 2)\][\[$(tput setaf 1)\]\u\[$(tput setaf 0)\]@\[$(tput setaf 1)\]\h \[$(tput setaf 2)\]\W\[$(tput setaf 2)\]]\\$ \[$(tput sgr0)\]"
 
-# Load Starship Shell
-eval "$(starship init bash)"
+# Set Starship config if present
+[[ -s "$HOME/.profile" ]] && export STARSHIP_CONFIG=~/.starship/config.toml
+
+# Load Starship Shell if present
+if [ -x /usr/local/bin/starship ]; then
+  eval "$(starship init bash)"
+fi
 
 ####################################################
 # Linux Only configuration
