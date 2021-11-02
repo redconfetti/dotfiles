@@ -100,6 +100,12 @@ set hlsearch
 " Makes search act like search in modern browsers
 set incsearch 
 
+" show line numbers
+set number
+
+" disable the swapfile
+set noswapfile
+
 " Don't redraw while executing macros (good performance config)
 set lazyredraw 
 
@@ -383,3 +389,6 @@ endfunction
 
 " Enable Mouse
 set mouse=a
+
+" highlight syntax
+syntax on
