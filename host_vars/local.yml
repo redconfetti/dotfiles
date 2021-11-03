@@ -1,14 +1,5 @@
 # vi: set ft=yaml :
 
-# Name used in commit messages
-# full_name: Steven Loria
-# Git
-# Github username
-# git_user: sloria
-# If you use github, this should be the same as the email
-#  used on Github
-# git_email: sloria1@gmail.com
-
 git_client_name: Jason Miller
 git_client_email: jason@redconfetti.com
 github_user: redconfetti
@@ -26,53 +17,12 @@ github_repos:
   - repo: git@github.com:redconfetti/c11-examples.git
     dir_name: c11-examples
 
-# Utilities that don't get installed by a role
-mac_homebrew_packages:
-  - wget
-  # User-contributed docs for Unix commands
-  - tldr
-  - nodenv
-  - gpg
-  # - curl
-  # - jq
-  # - youtube-dl
-  # - htop-osx
-  # - httpie
-  # - highlight
-  # - terminal-notifier
-  # - postgresql
-  # - redis
-  # - diff-so-fancy
-  # - docker-clean
-  # - heroku/brew/heroku
-  # Top for docker containers
-  # - ctop
-  # what's the wifi password?
-  # - wifi-password
-  # Share tmux sessions
-  # - tmate
-  # README rendering
-  # - grip
-  # Prose linting
-  # - vale
-  # For repeating commands
-  # - watch
-  # For displaying a notification when a command finishes
-  # - noti
-  # For encrypting envvars in Travis
-  # - travis
-  # - svn  # needed for installing font-cousine
-
 # Mac Apps to be installed with homebrew-cask
 mac_cask_packages:
-  # Password manager
-  # - 1password
   # Editor
   # - visual-studio-code
   # Backup/storage
   # - dropbox
-  # Browsers
-  - firefox
   # Display
   # - keepingyouawake  # maintained caffeinate wrapper
   # - bestres  # quickly switch resolution
@@ -81,29 +31,11 @@ mac_cask_packages:
   # - bettertouchtool
   # - appcleaner
   # - daisydisk
-  # Docker
-  # - docker
-  # chat
-  - slack
-  # - keybase
-  # - discord
-  # Video conferencing
-  - zoom
   # Media/Music
   # - spotify
   # - iina
   # Images
   # - imageoptim
-  # Notetaking
-  # - fsnotes
-  # - notion
-  # Fonts
-  # - font-ubuntu
-  # - font-cousine
-  # - font-hack
-  # - font-ia-writer-duospace
-  # Database client
-  # - tableplus
   # Docs
   # - dash
   # Stay focused
@@ -114,7 +46,5 @@ mac_cask_packages:
   # - insomnia
   # Flashcards
   # - anki
-  # Markdown-based presentations
-  # - deckset
   # Screen captures and recording
   # - cleanshot

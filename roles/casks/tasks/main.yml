@@ -1,0 +1,28 @@
+- name: Install Firefox
+  become: yes
+  become_user: '{{ mac_admin_user }}'
+  homebrew_cask:
+    name: firefox
+    state: present
+  when: ansible_os_family == "Darwin"
+- name: Install Slack
+  become: yes
+  become_user: '{{ mac_admin_user }}'
+  homebrew_cask:
+    name: slack
+    state: present
+  when: ansible_os_family == "Darwin"
+- name: Install Zoom
+  become: yes
+  become_user: '{{ mac_admin_user }}'
+  homebrew_cask:
+    name: zoom
+    state: present
+  when: ansible_os_family == "Darwin"
+- name: Install Dash
+  become: yes
+  become_user: '{{ mac_admin_user }}'
+  homebrew_cask:
+    name: dash
+    state: present
+  when: ansible_os_family == "Darwin"
