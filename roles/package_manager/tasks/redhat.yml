@@ -1,0 +1,6 @@
+---
+- name: Upgrade yum packages
+  yum:
+    name: '*'
+    state: present
+  when: package_upgrade

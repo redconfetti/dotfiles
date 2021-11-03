@@ -1,13 +1,43 @@
 ---
 # - debug: var=hostvars['local']['git_client_email']
 # - debug: var=hostvars['local']['git_client_name']
-- name: Install Git
+- name: Install git with Homebrew
   homebrew:
     name: git
     state: present
-- name: configure git client
+  when: ansible_os_family == "Darwin"
+
+- name: Install git with apt
+  apt:
+    name: git
+    state: present
+  become_method: sudo
+  when: ansible_os_family == "Debian"
+
+- name: Install git with yum
+  yum:
+    name: git
+    state: present
+  become_method: sudo
+  when: ansible_os_family == "RedHat"
+
+- name: configure git
   template:
     src: gitconfig.j2
     dest: "~/.gitconfig"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+
+- name: configure global gitignore
+  template:
+    src: gitignore_global.j2
+    dest: "~/.gitignore_global"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+
+- name: configure global gitattributes
+  template:
+    src: gitattributes_global.j2
+    dest: "~/.gitattributes_global"
     owner: "{{ ansible_user_id }}"
     mode: 0644

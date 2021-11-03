@@ -1,34 +1,57 @@
 # {{ ansible_managed }}
-[core]
-  # editor = vim
-  editor = code --wait
-  excludesfile = ~/.gitignore_global
-  attributesfile = ~/.gitattributes_global
-[user]
-  name = {{ git_client_name }}
-  email = {{ git_client_email }}
-[push]
-  default = simple
-[format]
-  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+
+[alias]
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+[apply]
+  whitespace = nowarn
+
 [color]
   diff = auto
   status = auto
   branch = auto
   ui = true
-[alias]
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-[include]
-  path = ~/.gitconfig_local
+
+{% if git_signing_key %}
+[commit]
+  gpgsign = true
+{% endif %}
+
+[core]
+  # editor = vim
+  editor = code --wait
+  excludesfile = ~/.gitignore_global
+  attributesfile = ~/.gitattributes_global
+
+{% if ansible_os_family == 'Darwin' %}
+[credential]
+  helper = osxkeychain
+{% endif %}
+
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
-[apply]
-  whitespace = nowarn
+
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+
 [github]
   user = {{ github_user }}
+
+[hub]
+  protocol = https
+
+[include]
+  path = ~/.gitconfig_local
+
+
+[push]
+  default = simple
+
+[user]
+  name = {{ git_client_name }}
+  email = {{ git_client_email }}
 {% if git_signing_key %}
-[commit]
-        gpgsign = true
+  signingkey = {{ git_signing_key }}
 {% endif %}
