@@ -1,5 +1,5 @@
 ---
-- name: Install mac-specific homebrew packages
+- name: Install Lynx
   homebrew:
     name: lynx
     state: present

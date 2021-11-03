@@ -10,7 +10,7 @@
     - {role: lynx, tags: ['lynx']}
     - {role: imgcat, tags: ['imgcat']}
     - {role: ruby, tags: ['ruby']}
-    # - {role: git, tags: ['git']}
+    - {role: git, tags: ['git']}
     # - {role: package_manager, tags: ['package_manager', 'bootstrap']}
     # - {role: zsh, tags: ['zsh', 'bootstrap']}
     # - {role: python, tags: ['python']}

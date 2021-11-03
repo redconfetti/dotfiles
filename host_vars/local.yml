@@ -11,6 +11,10 @@ git_client_name: Jason Miller
 git_client_email: jason@redconfetti.com
 github_user: redconfetti
 
+# GPG Key ID used to sign git commits
+# See https://github.com/pstadler/keybase-gpg-github setup instructions
+git_signing_key: "{{ lookup('env','GIT_SIGNING_KEY_ID') }}"
+
 timezone: America/Denver
 github_repos:
   - repo: git@github.com:redconfetti/redconfetti.github.io.git
@@ -23,7 +27,6 @@ github_repos:
 # Utilities that don't get installed by a role
 mac_homebrew_packages:
   - wget
-  - starship
   - exa
   - bat
   # User-contributed docs for Unix commands

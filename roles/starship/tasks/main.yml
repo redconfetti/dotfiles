@@ -1,4 +1,8 @@
 ---
+- name: Install Starship with Homebrew
+  homebrew:
+    name: starship
+    state: present
 - name: create .config directory
   ansible.builtin.file:
     path: ~/.config
