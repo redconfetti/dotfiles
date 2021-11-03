@@ -1,4 +1,5 @@
 # .bashrc
+# {{ ansible_managed }}
 # Run with every new window
 
 # Load Bash Aliases
@@ -34,7 +35,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export PS1="\[$(tput bold)\]\[$(tput setaf 2)\][\[$(tput setaf 1)\]\u\[$(tput setaf 0)\]@\[$(tput setaf 1)\]\h \[$(tput setaf 2)\]\W\[$(tput setaf 2)\]]\\$ \[$(tput sgr0)\]"
 
 # Set Starship config if present
-[[ -s "$HOME/.profile" ]] && export STARSHIP_CONFIG=~/.starship/config.toml
+[[ -s "$HOME/.starship/config.toml" ]] && export STARSHIP_CONFIG=~/.starship/config.toml
 
 # Load Starship Shell if present
 if [ -x /usr/local/bin/starship ]; then

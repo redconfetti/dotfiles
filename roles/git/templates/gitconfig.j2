@@ -1,17 +1,21 @@
+# {{ ansible_managed }}
 [core]
-  excludesfile = <%= ENV['HOME'] %>/.gitignore
-  editor = /usr/bin/vim
+  # editor = vim
+  editor = code --wait
+  excludesfile = ~/.gitignore_global
+  attributesfile = ~/.gitattributes_global
+[user]
+  name = {{ git_client_name }}
+  email = {{ git_client_email }}
 [push]
   default = simple
-[user]
-  name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
-  email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [format]
   pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [color]
   diff = auto
   status = auto
   branch = auto
+  ui = true
 [alias]
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [include]
@@ -20,3 +24,11 @@
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
+[apply]
+  whitespace = nowarn
+[github]
+  user = {{ github_user }}
+{% if git_signing_key %}
+[commit]
+        gpgsign = true
+{% endif %}

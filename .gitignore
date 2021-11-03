@@ -1,0 +1,9 @@
+# Ignore Mac meta-data files
+.DS_Store
+Thumbs.db
+
+# Ignore Ansible retry files
+*/**/*.retry
+
+# Ignore secrets
+secrets.yml

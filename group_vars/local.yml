@@ -1,0 +1,113 @@
+# Name used in commit messages
+# full_name: Steven Loria
+# Git
+# Github username
+# git_user: sloria
+# If you use github, this should be the same as the email
+#  used on Github
+# git_email: sloria1@gmail.com
+
+git_client_name: Jason Miller
+git_client_email: jason@redconfetti.com
+github_user: redconfetti
+
+timezone: America/Denver
+github_repos:
+  - repo: git@github.com:redconfetti/redconfetti.github.io.git
+    dir_name: redconfetti.github.io
+  - repo: git@github.com:redconfetti/cloud9-dev.git
+    dir_name: cloud9-dev
+  - repo: git@github.com:redconfetti/c11-examples.git
+    dir_name: c11-examples
+
+# Utilities that don't get installed by a role
+mac_homebrew_packages:
+  - curl
+  - jq
+  - wget
+  - youtube-dl
+  - htop-osx
+  - httpie
+  # - highlight
+  # - terminal-notifier
+  # - postgresql
+  # - redis
+  # - diff-so-fancy
+  # - docker-clean
+  - gpg
+  # - heroku/brew/heroku
+  # Top for docker containers
+  # - ctop
+  # User-contributed docs for Unix commands
+  - tldr
+  # what's the wifi password?
+  # - wifi-password
+  # Share tmux sessions
+  # - tmate
+  # README rendering
+  # - grip
+  # Prose linting
+  # - vale
+  # For repeating commands
+  - watch
+  # For displaying a notification when a command finishes
+  # - noti
+  # For encrypting envvars in Travis
+  # - travis
+  # - svn  # needed for installing font-cousine
+
+# Mac Apps to be installed with homebrew-cask
+mac_cask_packages:
+  # Password manager
+  - 1password
+  # Editor
+  - visual-studio-code
+  # Backup/storage
+  - dropbox
+  # Browsers
+  - firefox
+  # Display
+  - keepingyouawake  # maintained caffeinate wrapper
+  - bestres  # quickly switch resolution
+  - flux
+  # Utilities
+  - bettertouchtool
+  - appcleaner
+  - daisydisk
+  # Docker
+  - docker
+  # chat
+  - slack
+  - keybase
+  - discord
+  # Video conferencing
+  - zoom
+  # Media/Music
+  - spotify
+  - iina
+  # Images
+  - imageoptim
+  # Notetaking
+  - fsnotes
+  - notion
+  # Fonts
+  - font-ubuntu
+  - font-cousine
+  - font-hack
+  - font-ia-writer-duospace
+  # Database client
+  - tableplus
+  # Docs
+  - dash
+  # Stay focused
+  - selfcontrol
+  # Design
+  - sketch
+  # REST client
+  - insomnia
+  # Flashcards
+  - anki
+  # Markdown-based presentations
+  - deckset
+  # Screen captures and recording
+  - cleanshot

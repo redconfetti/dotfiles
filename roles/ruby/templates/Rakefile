@@ -1,3 +1,4 @@
+# Original Rakefile used to install dotfiles
 require 'rake'
 require 'erb'
 

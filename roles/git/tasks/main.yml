@@ -1,0 +1,16 @@
+---
+- debug: var=hostvars['hostname']
+- debug: var=hostvars['fqdn']
+- debug: var=hostvars['ansible_local']
+- debug: var=hostvars['ansible_playbook_python']
+- debug: var=hostvars['inventory_hostname']
+- debug: var=hostvars['inventory_file']
+- debug: var=hostvars['groups']
+
+- name: configure git client
+  template:
+    src: gitconfig.j2
+    dest: "/home/{{ ansible_user_id }}/.gitconfig"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+    mode: 0644

@@ -1,0 +1,57 @@
+---
+# - include_tasks: aliases.yml
+- name: configure bashrc
+  template:
+    src: bashrc.j2
+    dest: "~/.bashrc"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+- name: configure bash_profile
+  template:
+    src: bash_profile.j2
+    dest: "~/.bash_profile"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+- name: configure bash aliases
+  template:
+    src: bash_aliases.j2
+    dest: "~/.bash_aliases"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+- name: configure bash env vars
+  template:
+    src: bash_env_vars.j2
+    dest: "~/.bash_env_vars"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+- name: configure bash env path
+  template:
+    src: bash_env_path.j2
+    dest: "~/.bash_env_path"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+- name: configure bash env java
+  template:
+    src: bash_env_java.j2
+    dest: "~/.bash_env_java"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+- name: configure bash env ruby
+  template:
+    src: bash_env_ruby.j2
+    dest: "~/.bash_env_ruby"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+- name: configure bash env node
+  template:
+    src: bash_env_node.j2
+    dest: "~/.bash_env_node"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+# - name: configure bash env cloud9
+#   template:
+#     src: bash_env_cloud9.j2
+#     dest: "~/.bash_env_cloud9"
+#     owner: "{{ ansible_user_id }}"
+#     mode: 0644
+
