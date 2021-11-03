@@ -32,5 +32,5 @@ server to perform actions.
 ansible-playbook local_env.yml
 
 # Target specific roles by tags
-ansible-playbook local_env.yml --tags "common"
+ansible-playbook local_env.yml --tags "bash"
 ```

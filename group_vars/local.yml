@@ -22,24 +22,28 @@ github_repos:
 
 # Utilities that don't get installed by a role
 mac_homebrew_packages:
-  - curl
-  - jq
   - wget
-  - youtube-dl
-  - htop-osx
-  - httpie
+  - starship
+  - exa
+  - bat
+  # User-contributed docs for Unix commands
+  - tldr
+  - nodenv
+  - gpg
+  # - curl
+  # - jq
+  # - youtube-dl
+  # - htop-osx
+  # - httpie
   # - highlight
   # - terminal-notifier
   # - postgresql
   # - redis
   # - diff-so-fancy
   # - docker-clean
-  - gpg
   # - heroku/brew/heroku
   # Top for docker containers
   # - ctop
-  # User-contributed docs for Unix commands
-  - tldr
   # what's the wifi password?
   # - wifi-password
   # Share tmux sessions
@@ -49,7 +53,7 @@ mac_homebrew_packages:
   # Prose linting
   # - vale
   # For repeating commands
-  - watch
+  # - watch
   # For displaying a notification when a command finishes
   # - noti
   # For encrypting envvars in Travis
@@ -59,55 +63,55 @@ mac_homebrew_packages:
 # Mac Apps to be installed with homebrew-cask
 mac_cask_packages:
   # Password manager
-  - 1password
+  # - 1password
   # Editor
-  - visual-studio-code
+  # - visual-studio-code
   # Backup/storage
-  - dropbox
+  # - dropbox
   # Browsers
   - firefox
   # Display
-  - keepingyouawake  # maintained caffeinate wrapper
-  - bestres  # quickly switch resolution
-  - flux
+  # - keepingyouawake  # maintained caffeinate wrapper
+  # - bestres  # quickly switch resolution
+  # - flux
   # Utilities
-  - bettertouchtool
-  - appcleaner
-  - daisydisk
+  # - bettertouchtool
+  # - appcleaner
+  # - daisydisk
   # Docker
-  - docker
+  # - docker
   # chat
   - slack
-  - keybase
-  - discord
+  # - keybase
+  # - discord
   # Video conferencing
   - zoom
   # Media/Music
-  - spotify
-  - iina
+  # - spotify
+  # - iina
   # Images
-  - imageoptim
+  # - imageoptim
   # Notetaking
-  - fsnotes
-  - notion
+  # - fsnotes
+  # - notion
   # Fonts
-  - font-ubuntu
-  - font-cousine
-  - font-hack
-  - font-ia-writer-duospace
+  # - font-ubuntu
+  # - font-cousine
+  # - font-hack
+  # - font-ia-writer-duospace
   # Database client
-  - tableplus
+  # - tableplus
   # Docs
-  - dash
+  # - dash
   # Stay focused
-  - selfcontrol
+  # - selfcontrol
   # Design
-  - sketch
+  # - sketch
   # REST client
-  - insomnia
+  # - insomnia
   # Flashcards
-  - anki
+  # - anki
   # Markdown-based presentations
-  - deckset
+  # - deckset
   # Screen captures and recording
-  - cleanshot
+  # - cleanshot
