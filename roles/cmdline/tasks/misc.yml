@@ -4,3 +4,13 @@
     name: wget
     state: present
   when: ansible_os_family == "Darwin"
+- name: Install htop
+  homebrew:
+    name: htop
+    state: present
+  when: ansible_os_family == "Darwin"
+- name: Install diff-so-fancy
+  homebrew:
+    name: diff-so-fancy
+    state: present
+  when: ansible_os_family == "Darwin"

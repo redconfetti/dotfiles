@@ -19,6 +19,11 @@ if [ -x ~/.rbenv/shims/bundle ]; then
   alias be='bundle exec'
 fi
 
+# htop
+if [ -x /usr/local/bin/htop ]; then
+  alias top='htop'
+fi
+
 # exa
 if [ -x /usr/local/bin/exa ]; then
   alias ls='exa -gbH --header --git'

@@ -1,0 +1,21 @@
+---
+- name: Install youtube-dl
+  homebrew:
+    name: youtube-dl
+    state: absent
+  when: ansible_os_family == "Darwin"
+- name: Install grip
+  homebrew:
+    name: grip
+    state: absent
+  when: ansible_os_family == "Darwin"
+- name: Install tmate
+  homebrew:
+    name: tmate
+    state: absent
+  when: ansible_os_family == "Darwin"
+- name: Uninstall httpie
+  homebrew:
+    name: httpie
+    state: absent
+  when: ansible_os_family == "Darwin"
