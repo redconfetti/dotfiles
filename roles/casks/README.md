@@ -6,11 +6,13 @@ GUI applications I deem necessary on any system
 * [Slack] - Team communication and collaboration software
 * [Zoom] - Video communication and virtual meeting platform
 * [Dash] - API documentation browser and code snippet manager
+* [VSCodium] - Binary releases of VS Code without MS branding/telemetry/licensing
 
 [Firefox]: https://formulae.brew.sh/cask/firefox#default
 [Slack]: https://formulae.brew.sh/cask/slack
 [Zoom]: https://formulae.brew.sh/cask/zoom
 [Dash]: https://formulae.brew.sh/cask/dash
+[VSCodium]: https://formulae.brew.sh/cask/vscodium
 
 ## Gaining Admin Access
 

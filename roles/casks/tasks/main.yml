@@ -1,3 +1,4 @@
+---
 - name: Install Firefox
   become: yes
   become_user: '{{ mac_admin_user }}'
@@ -24,5 +25,13 @@
   become_user: '{{ mac_admin_user }}'
   homebrew_cask:
     name: dash
+    state: present
+  when: ansible_os_family == "Darwin"
+- name: Install VSCodium
+  become: yes
+  become_method: su
+  become_user: '{{ mac_admin_user }}'
+  homebrew_cask:
+    name: vscodium
     state: present
   when: ansible_os_family == "Darwin"
