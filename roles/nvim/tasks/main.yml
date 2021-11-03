@@ -1,1 +1,19 @@
-# create .config/nvim/init.vim
+- name: Configure Vim
+  template:
+    src: vimrc.j2
+    dest: "~/.vimrc"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+- name: create .config/nvim directory
+  ansible.builtin.file:
+    path: ~/.config/nvim
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    mode: 0755
+- name: configure Nvim
+  # create .config/nvim/init.vim
+  template:
+    src: init.vim.j2
+    dest: "~/.config/nvim/init.vim"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
