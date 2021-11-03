@@ -3,6 +3,7 @@
   homebrew:
     name: lynx
     state: present
+  when: ansible_os_family == "Darwin"
 - name: configure lynxrc
   template:
     src: lynxrc.j2

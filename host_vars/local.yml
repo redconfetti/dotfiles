@@ -29,8 +29,6 @@ github_repos:
 # Utilities that don't get installed by a role
 mac_homebrew_packages:
   - wget
-  - exa
-  - bat
   # User-contributed docs for Unix commands
   - tldr
   - nodenv

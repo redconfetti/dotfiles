@@ -13,10 +13,14 @@
     state: present
 
 - name: Tap into homebrew/cask-versions
-  homebrew_tap: tap=homebrew/cask-versions state=present
+  homebrew_tap:
+    tap: homebrew/cask-versions
+    state: present
 
 - name: Install Mac apps with homebrew cask
-  homebrew_cask: name={{item}} state=present
+  homebrew_cask:
+    name: '{{item}}'
+    state: present
   with_items: '{{mac_cask_packages}}'
 
 # - name: Install mas

@@ -1,0 +1,6 @@
+---
+- name: Install wget with Homebrew
+  homebrew:
+    name: wget
+    state: present
+  when: ansible_os_family == "Darwin"

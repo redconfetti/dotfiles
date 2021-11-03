@@ -1,5 +1,4 @@
 ---
-# - include_tasks: aliases.yml
 - name: configure bashrc
   template:
     src: bashrc.j2
@@ -54,4 +53,3 @@
 #     dest: "~/.bash_env_cloud9"
 #     owner: "{{ ansible_user_id }}"
 #     mode: 0644
-

@@ -1,0 +1,6 @@
+---
+- name: Install tldr with Homebrew
+  homebrew:
+    name: tldr
+    state: present
+  when: ansible_os_family == "Darwin"
