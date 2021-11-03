@@ -1,0 +1,19 @@
+---
+- name: configure .gemrc
+  template:
+    src: gemrc.j2
+    dest: "~/.gemrc"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+- name: configure .jrubyrc
+  template:
+    src: jrubyrc.j2
+    dest: "~/.jrubyrc"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+- name: configure .rspec
+  template:
+    src: rspec.j2
+    dest: "~/.rspec"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644

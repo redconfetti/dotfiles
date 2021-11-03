@@ -1,0 +1,11 @@
+---
+- name: Install mac-specific homebrew packages
+  homebrew:
+    name: lynx
+    state: present
+- name: configure lynxrc
+  template:
+    src: lynxrc.j2
+    dest: "~/.lynxrc"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644

@@ -1,8 +1,6 @@
 # Setup
 
-## Setup
-
-### Install Homebrew
+## Install Homebrew
 
 Install [Homebrew]
 
@@ -27,7 +25,7 @@ $ sudo nano /etc/paths
 
 [Homebrew]: http://brew.sh/
 
-### Install Brew Packages
+## Install Brew Packages
 
 Install packages specified in the [Brewfile].
 
@@ -37,7 +35,7 @@ brew bundle
 
 [Brewfile]: https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew
 
-### Ansible Galaxy
+## Ansible Galaxy
 
 Install Ansible dependencies from the
 [Ansible Galaxy](https://galaxy.ansible.com/) using the following command:
@@ -46,7 +44,7 @@ Install Ansible dependencies from the
 ansible-galaxy install -r requirements.yml
 ```
 
-### Ansible Vault
+## Ansible Vault
 
 The most sensitive settings are stored in `secrets.yml`, which is encrypted
 using Ansible Vault. A single password is used to unencrypt this file,

@@ -1,1 +1,13 @@
-# copy to bin/imgcat
+---
+- name: create bin directory
+  ansible.builtin.file:
+    path: ~/bin
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    mode: 0755
+- name: configure imgcat
+  template:
+    src: imgcat.j2
+    dest: "~/bin/imgcat"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
