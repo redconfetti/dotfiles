@@ -1,4 +1,9 @@
 ---
+- name: Install RBenv
+  homebrew:
+    name: rbenv
+    state: present
+  when: ansible_os_family == "Darwin"
 - name: configure .gemrc
   template:
     src: gemrc.j2

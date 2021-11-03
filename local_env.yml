@@ -12,7 +12,7 @@
     - {role: imgcat, tags: ['imgcat']}
     - {role: ruby, tags: ['ruby']}
     - {role: nvim, tags: ['nvim']}
-    # - {role: node, tags: ['node']}
+    - {role: node, tags: ['node']}
     # Github Client
     # - {role: hub, tags: ['hub']}
     # https://direnv.net/
