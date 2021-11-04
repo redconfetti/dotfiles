@@ -9,9 +9,17 @@ github_user: redconfetti
 git_signing_key: "{{ lookup('env','GIT_SIGNING_KEY_ID') }}"
 
 github_repos:
-  - repo: git@github.com:redconfetti/redconfetti.github.io.git
-    dir_name: redconfetti.github.io
-  - repo: git@github.com:redconfetti/cloud9-dev.git
-    dir_name: cloud9-dev
+  - repo: git@github.com:redconfetti/atari-asm.git
+    dir_name: atari-asm
   - repo: git@github.com:redconfetti/c11-examples.git
     dir_name: c11-examples
+  - repo: git@github.com:redconfetti/cloud9-dev.git
+    dir_name: cloud9-dev
+  - repo: git@github.com:redconfetti/config.git
+    dir_name: config
+  - repo: git@github.com:redconfetti/com.redconfetti.git
+    dir_name: com.redconfetti
+  - repo: git@github.com:redconfetti/dotfiles.git
+    dir_name: dotfiles
+  - repo: git@github.com:redconfetti/redconfetti.github.io.git
+    dir_name: redconfetti.github.io

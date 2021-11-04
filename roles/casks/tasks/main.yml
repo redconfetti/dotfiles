@@ -10,32 +10,37 @@
   homebrew_cask:
     name: slack
     state: present
+    install_options: 'force,appdir=/Applications'
+    sudo_password: "{{ mac_admin_pass }}"
   when: ansible_os_family == "Darwin"
-- name: Install Zoom
-  become: yes
-  homebrew_cask:
-    name: zoom
-    state: present
-  when: ansible_os_family == "Darwin"
+# - name: Install Zoom
+#   become: yes
+#   homebrew_cask:
+#     name: zoom
+#     state: present
+#   when: ansible_os_family == "Darwin"
 - name: Install Dash
   become: yes
   homebrew_cask:
     name: dash
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: 'force,appdir=/Applications'
+    sudo_password: "{{ mac_admin_pass }}"
   when: ansible_os_family == "Darwin"
 - name: Install VSCodium
   become: yes
   homebrew_cask:
     name: vscodium
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: 'force,appdir=/Applications'
+    sudo_password: "{{ mac_admin_pass }}"
   when: ansible_os_family == "Darwin"
 - name: Install bestres
   homebrew_cask:
     name: bestres
     state: present
-    install_options: 'appdir=/Applications'
+    install_options: 'force,appdir=/Applications'
+    sudo_password: "{{ mac_admin_pass }}"
   become: yes
   when: ansible_os_family == "Darwin"
 # - name: Install mas
