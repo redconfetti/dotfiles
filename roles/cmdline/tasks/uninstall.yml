@@ -1,15 +1,15 @@
 ---
-- name: Install youtube-dl
+- name: Uninstall youtube-dl
   homebrew:
     name: youtube-dl
     state: absent
   when: ansible_os_family == "Darwin"
-- name: Install grip
+- name: Uninstall grip
   homebrew:
     name: grip
     state: absent
   when: ansible_os_family == "Darwin"
-- name: Install tmate
+- name: Uninstall tmate
   homebrew:
     name: tmate
     state: absent
