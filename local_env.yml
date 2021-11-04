@@ -18,4 +18,5 @@
     - {role: node, tags: ['node']}
     - {role: vscode, tags: ['vscode']}
     - {role: macos, tags: ['macos'], when: ansible_os_family == "Darwin"}
+    - {role: development, tags: ['development']}
 

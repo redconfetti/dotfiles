@@ -1,0 +1,14 @@
+---
+- name: create ~/Development directory
+  ansible.builtin.file:
+    path: ~/Development
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    mode: 0755
+- name: clone dev projects
+  become_user: app_calcentral
+  ansible.builtin.git:
+    repo: '{{ item.repo }}'
+    dest: '~/Developer/{{ item.dir_name }}'
+    clone: true
+  with_items: '{{ github_repos }}'

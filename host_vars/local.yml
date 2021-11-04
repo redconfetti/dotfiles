@@ -8,7 +8,6 @@ github_user: redconfetti
 # See https://github.com/pstadler/keybase-gpg-github setup instructions
 git_signing_key: "{{ lookup('env','GIT_SIGNING_KEY_ID') }}"
 
-timezone: America/Denver
 github_repos:
   - repo: git@github.com:redconfetti/redconfetti.github.io.git
     dir_name: redconfetti.github.io
