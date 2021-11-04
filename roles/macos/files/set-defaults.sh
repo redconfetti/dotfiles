@@ -22,6 +22,9 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 echo "  › show the ~/Library folder"
 chflags nohidden ~/Library
 
+echo "  › Open Finder in list view"
+defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+
 echo "  › disable smart quotes and smart dashes as they're annoying when typing code"
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
@@ -40,16 +43,4 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 echo "  › Disable auto-correct? (y/n)"
-read -r response
-if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
-  defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-fi
-
-# echo "  › Autohide Dock"
-# defaults write com.apple.dock autohide -bool true && killall Dock
-
-# echo "  › Don't use native full-screen (separate Space) for MacVim"
-# defaults write org.vim.MacVim MMNativeFullScreen 0
-
-# echo "  › Enable key repeat in VSCodeVim"
-# defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false 
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false

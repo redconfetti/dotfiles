@@ -1,18 +1,37 @@
 # Homebrew Casks
 
-GUI applications I deem necessary on any system
+Installs GUI applications.
 
 * [Firefox] - Web browser
 * [Slack] - Team communication and collaboration software
 * [Zoom] - Video communication and virtual meeting platform
 * [Dash] - API documentation browser and code snippet manager
 * [VSCodium] - Binary releases of VS Code without MS branding/telemetry/licensing
+* [bestres] - Quickly change your screen resolution from the menubar
+* Other Options (not installed)
+  * [appcleaner] - Free Application uninstaller
+  * [daisydisk] - Disk space visualizer
+  * [iina] - Free and open-source media player
+  * [imageoptim] - Tool to optimize images to a smaller size
+  * [selfcontrol] - Block your own access to distracting websites
+  * [insomnia] - HTTP and GraphQL client
+  * [cleanshot] - Screen capturing tool
+  * [sketch] - Digital design and prototyping platform
 
 [Firefox]: https://formulae.brew.sh/cask/firefox#default
 [Slack]: https://formulae.brew.sh/cask/slack
 [Zoom]: https://formulae.brew.sh/cask/zoom
 [Dash]: https://formulae.brew.sh/cask/dash
 [VSCodium]: https://formulae.brew.sh/cask/vscodium
+[bestres]: https://formulae.brew.sh/cask/bestres
+[appcleaner]: https://formulae.brew.sh/cask/appcleaner
+[daisydisk]: https://formulae.brew.sh/cask/daisydisk
+[iina]: https://formulae.brew.sh/cask/iina
+[imageoptim]: https://formulae.brew.sh/cask/imageoptim
+[selfcontrol]: https://formulae.brew.sh/cask/selfcontrol
+[insomnia]: https://formulae.brew.sh/cask/insomnia
+[cleanshot]: https://formulae.brew.sh/cask/cleanshot
+[sketch]: https://formulae.brew.sh/cask/sketch
 
 ## Gaining Admin Access
 

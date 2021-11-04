@@ -17,11 +17,5 @@
     - {role: nvim, tags: ['nvim']}
     - {role: node, tags: ['node']}
     - {role: vscode, tags: ['vscode']}
-    # Github Client
-    # - {role: hub, tags: ['hub']}
-    # https://direnv.net/
-    # - {role: direnv, tags: ['direnv']}
-    # - {role: tmux, tags: ['tmux']}
-    # Cmdline Journal - https://jrnl.sh/en/stable/
-    # - {role: jrnl, tags: ['jrnl']}
-    # - {role: macos, tags: ['macos'], when: ansible_os_family == "Darwin"}
+    - {role: macos, tags: ['macos'], when: ansible_os_family == "Darwin"}
+

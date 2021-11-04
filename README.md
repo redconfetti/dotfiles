@@ -2,26 +2,13 @@
 
 My personal command line environment. Inspired by [sloria/dotfiles].
 
-- [Setup](docs/setup.md)
-- [Old README](docs/old.md)
-
 [sloria/dotfiles]: https://github.com/sloria/dotfiles
 
+## Setup
+
+- See [Setup Instructions](docs/setup.md)
+
 ## Usage
-
-### Ansible Vault
-
-Use the edit command below to.
-
-```bash
-# edit vault file
-ansible-vault edit secrets.yml
-
-# view contents of vault file
-ansible-vault view secrets.yml
-```
-
-## Playbooks
 
 There is a single playbook you can run against the private server.
 It is expected that your SSH client is configured to connect to the host

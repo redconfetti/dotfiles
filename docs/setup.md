@@ -1,5 +1,9 @@
 # Setup
 
+## Machine Specific Configurations
+
+If you need aliases that are specific to your machine, place them in `.profile`.
+
 ## Install Homebrew
 
 Install [Homebrew]

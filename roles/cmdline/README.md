@@ -9,6 +9,8 @@ My prefered command line configuration.
 * [TLDR] - Simplified and community-driven man pages
 * [htop] - Improved top (interactive process viewer)
 * [diff-so-fancy] - Good-lookin' diffs with diff-highlight and more
+* [jrnl] - Command-line note taker / journal
+* [tmux] -  terminal multiplexer
 * Consideration
   * [youtube-dl] - Download YouTube videos from the command-line
   * [grip] - GitHub Markdown previewer
@@ -26,3 +28,5 @@ My prefered command line configuration.
 [grip]: https://github.com/joeyespo/grip
 [tmate]: https://tmate.io/
 [httpie]: https://httpie.io/
+[jrnl]: https://jrnl.sh/
+[tmux]: https://github.com/tmux/tmux/wiki

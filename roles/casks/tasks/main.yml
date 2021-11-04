@@ -1,37 +1,48 @@
 ---
 - name: Install Firefox
   become: yes
-  become_user: '{{ mac_admin_user }}'
   homebrew_cask:
     name: firefox
     state: present
   when: ansible_os_family == "Darwin"
 - name: Install Slack
   become: yes
-  become_user: '{{ mac_admin_user }}'
   homebrew_cask:
     name: slack
     state: present
   when: ansible_os_family == "Darwin"
 - name: Install Zoom
   become: yes
-  become_user: '{{ mac_admin_user }}'
   homebrew_cask:
     name: zoom
     state: present
   when: ansible_os_family == "Darwin"
 - name: Install Dash
   become: yes
-  become_user: '{{ mac_admin_user }}'
   homebrew_cask:
     name: dash
     state: present
+    install_options: 'appdir=/Applications'
   when: ansible_os_family == "Darwin"
 - name: Install VSCodium
   become: yes
-  become_method: su
-  become_user: '{{ mac_admin_user }}'
   homebrew_cask:
     name: vscodium
     state: present
+    install_options: 'appdir=/Applications'
   when: ansible_os_family == "Darwin"
+- name: Install bestres
+  homebrew_cask:
+    name: bestres
+    state: present
+    install_options: 'appdir=/Applications'
+  become: yes
+  when: ansible_os_family == "Darwin"
+# - name: Install mas
+#   homebrew: name=mas state=present
+# - name: Install Mac-App-Store-only apps with mas
+#   command: mas install {{item.id}}
+#   args:
+#     creates: "/Applications/{{item.name}}.app"
+#   with_items: '{{mac_mas_packages}}'
+#   tags: mas
