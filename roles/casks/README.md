@@ -8,6 +8,7 @@ Installs GUI applications.
 * [Dash] - API documentation browser and code snippet manager
 * [VSCodium] - Binary releases of VS Code without MS branding/telemetry/licensing
 * [bestres] - Quickly change your screen resolution from the menubar
+* [devutils] - Offline toolbox for developers
 * Other Options (not installed)
   * [appcleaner] - Free Application uninstaller
   * [daisydisk] - Disk space visualizer
@@ -24,6 +25,7 @@ Installs GUI applications.
 [Dash]: https://formulae.brew.sh/cask/dash
 [VSCodium]: https://formulae.brew.sh/cask/vscodium
 [bestres]: https://formulae.brew.sh/cask/bestres
+[devutils]: https://formulae.brew.sh/cask/devutils
 [appcleaner]: https://formulae.brew.sh/cask/appcleaner
 [daisydisk]: https://formulae.brew.sh/cask/daisydisk
 [iina]: https://formulae.brew.sh/cask/iina
