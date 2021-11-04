@@ -44,7 +44,9 @@ stored in `~/.vault_pass`. Run the following command to create a random password
 in this file:
 
 ```bash
-openssl rand -base64 48 > ~/.vault_pass && chmod 600 ~/.vault_pass
+if ! [[ -s ~/.vault_pass ]]; then
+  openssl rand -base64 48 > ~/.vault_pass && chmod 600 ~/.vault_pass
+fi
 ```
 
 Run the following command to initialize your `secrets.yml` Vault file using
