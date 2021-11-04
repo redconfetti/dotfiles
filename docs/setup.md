@@ -2,7 +2,7 @@
 
 ## Machine Specific Configurations
 
-If you need aliases that are specific to your machine, place them in `.profile`.
+If you need configuration that is specific to your machine, place them in `.profile`.
 
 ## Install Homebrew
 
@@ -56,7 +56,9 @@ the contents of `secrets_example.yml` as a template.
 ansible-vault encrypt secrets_example.yml --output secrets.yml
 ```
 
-To view or edit the Vault file, run the following commands:
+To view or edit the Vault file, run the following commands. You'll want to
+edit this file and configure secrets such as your Mac admin username
+and password, and Github access token.
 
 ```bash
 # edit vault file
@@ -69,7 +71,7 @@ ansible-vault view secrets.yml
 By default this file is not included in the repository. You can comment this
 out in `.gitignore` to ensure it is included in your repository.
 It is recommended that you use a private repository if you're going
-to store encrypted secrets.
+to store encrypted secrets in your repository.
 
 For more details, see [Ansible Vault]
 
