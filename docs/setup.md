@@ -29,28 +29,16 @@ $ sudo nano /etc/paths
 
 [Homebrew]: http://brew.sh/
 
-## Install Brew Packages
-
-Install packages specified in the [Brewfile].
+## Install Git and Ansible
 
 ```shell
-brew bundle
-```
-
-[Brewfile]: https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew
-
-## Ansible Galaxy
-
-Install Ansible dependencies from the
-[Ansible Galaxy](https://galaxy.ansible.com/) using the following command:
-
-```bash
-ansible-galaxy install -r requirements.yml
+brew install git
+brew install ansible
 ```
 
 ## Ansible Vault
 
-The most sensitive settings are stored in `secrets.yml`, which is encrypted
+Sensitive settings are stored in `secrets.yml`, which is encrypted
 using Ansible Vault. A single password is used to unencrypt this file,
 stored in `~/.vault_pass`. Run the following command to create a random password
 in this file:
@@ -78,6 +66,8 @@ ansible-vault view secrets.yml
 
 By default this file is not included in the repository. You can comment this
 out in `.gitignore` to ensure it is included in your repository.
+It is recommended that you use a private repository if you're going
+to store encrypted secrets.
 
 For more details, see [Ansible Vault]
 

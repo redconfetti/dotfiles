@@ -10,10 +10,7 @@ My personal command line environment. Inspired by [sloria/dotfiles].
 
 ## Usage
 
-There is a single playbook you can run against the private server.
-It is expected that your SSH client is configured to connect to the host
-using a private SSH key without passphrase, and then use sudo on the remote
-server to perform actions.
+There is a single playbook you can run against your local machine.
 
 ```bash
 ansible-playbook local_env.yml
