@@ -6,6 +6,7 @@ Installs GUI applications.
 * [Slack] - Team communication and collaboration software
 * [Zoom] - Video communication and virtual meeting platform
 * [Dash] - API documentation browser and code snippet manager
+* [Keycastr] - Open-source keystroke visualizer
 * [VSCodium] - Binary releases of VS Code without MS branding/telemetry/licensing
 * [bestres] - Quickly change your screen resolution from the menubar
 * [devutils] - Offline toolbox for developers
@@ -23,6 +24,7 @@ Installs GUI applications.
 [Slack]: https://formulae.brew.sh/cask/slack
 [Zoom]: https://formulae.brew.sh/cask/zoom
 [Dash]: https://formulae.brew.sh/cask/dash
+[Keycastr]: https://formulae.brew.sh/cask/keycastr
 [VSCodium]: https://formulae.brew.sh/cask/vscodium
 [bestres]: https://formulae.brew.sh/cask/bestres
 [devutils]: https://formulae.brew.sh/cask/devutils

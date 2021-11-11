@@ -35,6 +35,12 @@
     install_options: 'force,appdir=/Applications'
     sudo_password: "{{ mac_admin_pass }}"
   when: ansible_os_family == "Darwin"
+- name: Install keycastr
+  homebrew_cask:
+    name: keycastr
+    state: present
+    install_options: 'force,appdir=/Applications'
+    sudo_password: "{{ mac_admin_pass }}"
 - name: Install bestres
   homebrew_cask:
     name: bestres
