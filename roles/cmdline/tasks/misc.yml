@@ -1,4 +1,9 @@
 ---
+- name: Install less with Homebrew
+  homebrew:
+    name: less
+    state: present
+  when: ansible_os_family == 'Darwin' 
 - name: Install wget with Homebrew
   homebrew:
     name: wget
