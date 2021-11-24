@@ -13,7 +13,7 @@
     - {role: ruby, tags: ['ruby']}
     - {role: nvim, tags: ['nvim']}
     - {role: node, tags: ['node']}
-    - {role: vscode, tags: ['vscode']}
+    - {role: vscodium, tags: ['vscodium']}
     - {role: macos, tags: ['macos'], when: ansible_os_family == "Darwin"}
     - {role: development, tags: ['development']}
 

@@ -2,6 +2,6 @@
 - name: configure vscode
   template:
     src: settings.json.j2
-    dest: "~/Library/Application\ Support/Code/User/settings.json"
+    dest: "~/Library/Application\ Support/VSCodium/User/settings.json"
     owner: "{{ ansible_user_id }}"
     mode: 0644

@@ -19,6 +19,7 @@ ansible-playbook local_env.yml
 ansible-playbook local_env.yml --tags "cmdline"
 ansible-playbook local_env.yml --tags "casks"
 ansible-playbook local_env.yml --tags "development"
+ansible-playbook local_env.yml --tags "vscodium"
 ```
 
 ## Roles
