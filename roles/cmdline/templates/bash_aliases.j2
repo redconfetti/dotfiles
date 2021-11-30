@@ -1,7 +1,13 @@
 # User specific aliases and functions
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -laF'
+alias l='ls -la'
+
+# Git
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+alias gc='git commit'
+alias gg='git grep'
 
 # Vim
 alias vim='nvim'
@@ -12,7 +18,7 @@ alias flushmem="echo 'flush_all' | nc localhost 11211"
 alias statsmem="echo 'stats' | nc 127.0.0.1 11211"
 
 if [ -x /usr/local/bin/git ]; then
-  alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
+  alias gl='git log --oneline --abbrev-commit --all --graph --decorate --color'
 fi
 
 if [ -x ~/.rbenv/shims/bundle ]; then
