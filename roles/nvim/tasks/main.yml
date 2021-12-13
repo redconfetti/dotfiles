@@ -4,22 +4,27 @@
     name: neovim
     state: present
   when: ansible_os_family == "Darwin"
-- name: Configure Vim
-  template:
-    src: vimrc.j2
-    dest: "~/.vimrc"
-    owner: "{{ ansible_user_id }}"
-    mode: 0644
 - name: create .config/nvim directory
   ansible.builtin.file:
     path: ~/.config/nvim
     state: directory
     owner: "{{ ansible_user_id }}"
     mode: 0755
-- name: configure Nvim
-  # create .config/nvim/init.vim
+- name: Configure Nvim
   template:
     src: init.vim.j2
     dest: "~/.config/nvim/init.vim"
     owner: "{{ ansible_user_id }}"
     mode: 0644
+- name: create plugin manager directory
+  ansible.builtin.file:
+    path: "~/.local/share/nvim/site/autoload/"
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    mode: 0755
+- name: Download plugin manager
+  get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/68488fd7a/plug.vim
+    dest: "~/.local/share/nvim/site/autoload/plug.vim"
+    mode: '0644'
+    checksum: md5:b5f3cd359c2bf8090aee28845fa7a787
