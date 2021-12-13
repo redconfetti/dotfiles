@@ -30,11 +30,17 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" disable compatibility to old-time vi
+set nocompatible
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
 " Enable filetype plugins
 filetype plugin on
+
+" allows auto-indenting depending on file type
 filetype indent on
 
 " Set to auto read when a file is changed from the outside
@@ -78,6 +84,12 @@ endif
 "Always show current position
 set ruler
 
+" highlight current cursorline
+set cursorline
+
+" Speed up scrolling in Vim
+set ttyfast
+
 " Height of the command bar
 set cmdheight=2
 
@@ -106,6 +118,9 @@ set number
 " line to limit to 80 chars
 set textwidth=80
 
+" set an 80 column border for good coding style
+set cc=80
+
 " disable the swapfile
 set noswapfile
 
@@ -116,7 +131,8 @@ set lazyredraw
 set magic
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
+
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -190,6 +206,15 @@ set smarttab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+
+" see multiple spaces as tabstops so <BS> does the right thing
+set softtabstop=2
+
+" indent a new line the same amount as the line just typed
+set autoindent
+
+" get bash-like tab completions
+set wildmode=longest,list   
 
 " Linebreak on 500 characters
 set lbr
@@ -400,6 +425,9 @@ endfunction
 " Enable Mouse
 set mouse=a
 
+" middle-click paste with 
+"set mouse=v
+
 " highlight syntax
 syntax on
 
@@ -408,13 +436,19 @@ syntax on
 " ===========
 call plug#begin('~/.vim/plugged')
 
+" Dark theme for Vim
+Plug 'dracula/vim'
+
+" A tree explorer plugin for vim
+Plug 'preservim/nerdtree'
+
 " Collection of color schemes
-Plug 'rafi/awesome-vim-colorschemes'
+" Plug 'rafi/awesome-vim-colorschemes'
+
+" Vim/Ruby Configuration Files
+Plug 'vim-ruby/vim-ruby'
 
 " Ruby on Rails power tools
 Plug 'tpope/vim-rails'
 
 call plug#end()
-
-" Use the colorscheme
-colorscheme OceanicNext
