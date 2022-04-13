@@ -11,7 +11,7 @@
   apt:
     name: git
     state: present
-  become_method: sudo
+  become: yes
   when: ansible_os_family == "Debian"
 
 - name: Install git with yum

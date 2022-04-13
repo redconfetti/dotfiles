@@ -1,7 +1,7 @@
 ---
-- name: create ~/Development directory
+- name: create ~/Developer directory
   ansible.builtin.file:
-    path: ~/Development
+    path: ~/Developer
     state: directory
     owner: "{{ ansible_user_id }}"
     mode: 0755

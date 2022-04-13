@@ -5,9 +5,11 @@
     state: directory
     owner: "{{ ansible_user_id }}"
     mode: 0755
+  when: ansible_os_family == "Darwin"
 - name: configure imgcat
   template:
     src: imgcat.j2
     dest: "~/bin/imgcat"
     owner: "{{ ansible_user_id }}"
     mode: 0644
+  when: ansible_os_family == "Darwin"

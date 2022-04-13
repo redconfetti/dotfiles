@@ -4,13 +4,18 @@
 
 If you need configuration that is specific to your machine, place them in `.profile`.
 
-## Install Homebrew
+## Setup Script
 
-Install [Homebrew]
+You can run `setup.sh` to install the appropriate package managers (if needed),
+and then install the prerequisite software (Ansible, Git, etc).
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+./setup.sh
 ```
+
+### Mac OS X
+
+The setup script will install [Homebrew] as a package manager.
 
 When running Homebrew software and libraries, it's best for them to detect each
 other in the environment, especially when trying to build new software. You can
@@ -28,13 +33,6 @@ $ sudo nano /etc/paths
 ```
 
 [Homebrew]: http://brew.sh/
-
-## Install Git and Ansible
-
-```shell
-brew install git
-brew install ansible
-```
 
 ## Ansible Vault
 

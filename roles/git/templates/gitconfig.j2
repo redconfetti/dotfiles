@@ -36,7 +36,7 @@
   editor = codium --wait
   excludesfile = ~/.gitignore_global
   attributesfile = ~/.gitattributes_global
-  pager = diff-so-fancy | less --tabs=4 -RFX
+  # pager = diff-so-fancy | less --tabs=4 -RFX
 
 {% if ansible_os_family == 'Darwin' %}
 [credential]
@@ -60,8 +60,8 @@
 [include]
   path = ~/.gitconfig_local
 
-[interactive]
-  diffFilter = diff-so-fancy --patch
+# [interactive]
+#  diffFilter = diff-so-fancy --patch
 
 [push]
   default = simple

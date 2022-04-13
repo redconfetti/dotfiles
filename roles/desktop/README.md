@@ -1,24 +1,29 @@
-# Homebrew Casks
+# Desktop Applications
 
-Installs GUI applications.
+Installs GUI applications for Mac OSX or Ubuntu
 
-* [Firefox] - Web browser
-* [Slack] - Team communication and collaboration software
-* [Zoom] - Video communication and virtual meeting platform
-* [Dash] - API documentation browser and code snippet manager
-* [Keycastr] - Open-source keystroke visualizer
-* [VSCodium] - Binary releases of VS Code without MS branding/telemetry/licensing
-* [bestres] - Quickly change your screen resolution from the menubar
-* [devutils] - Offline toolbox for developers
-* Other Options (not installed)
-  * [appcleaner] - Free Application uninstaller
-  * [daisydisk] - Disk space visualizer
-  * [iina] - Free and open-source media player
-  * [imageoptim] - Tool to optimize images to a smaller size
-  * [selfcontrol] - Block your own access to distracting websites
-  * [insomnia] - HTTP and GraphQL client
-  * [cleanshot] - Screen capturing tool
-  * [sketch] - Digital design and prototyping platform
+* Ubuntu
+  * [Brave] - Brave web browser
+* Mac OS X
+  * [Firefox] - Web browser
+  * [Slack] - Team communication and collaboration software
+  * [Zoom] - Video communication and virtual meeting platform
+  * [Dash] - API documentation browser and code snippet manager
+  * [Keycastr] - Open-source keystroke visualizer
+  * [VSCodium] - Binary releases of VS Code without MS branding/telemetry/licensing
+  * [bestres] - Quickly change your screen resolution from the menubar
+  * [devutils] - Offline toolbox for developers
+  * Other Options (not installed)
+    * [appcleaner] - Free Application uninstaller
+    * [daisydisk] - Disk space visualizer
+    * [iina] - Free and open-source media player
+    * [imageoptim] - Tool to optimize images to a smaller size
+    * [selfcontrol] - Block your own access to distracting websites
+    * [insomnia] - HTTP and GraphQL client
+    * [cleanshot] - Screen capturing tool
+    * [sketch] - Digital design and prototyping platform
+
+[Brave]: https://snapcraft.io/brave
 
 [Firefox]: https://formulae.brew.sh/cask/firefox#default
 [Slack]: https://formulae.brew.sh/cask/slack

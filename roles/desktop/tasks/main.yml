@@ -1,4 +1,9 @@
 ---
+- name: Install Brave
+  snap:
+    name: brave
+  become: yes
+  when: ansible_os_family == "Debian"
 - name: Install Firefox
   become: yes
   homebrew_cask:
@@ -41,6 +46,7 @@
     state: present
     install_options: 'force,appdir=/Applications'
     sudo_password: "{{ mac_admin_pass }}"
+  when: ansible_os_family == "Darwin"
 - name: Install bestres
   homebrew_cask:
     name: bestres

@@ -47,9 +47,3 @@
     dest: "~/.bash_env_node"
     owner: "{{ ansible_user_id }}"
     mode: 0644
-# - name: configure bash env cloud9
-#   template:
-#     src: bash_env_cloud9.j2
-#     dest: "~/.bash_env_cloud9"
-#     owner: "{{ ansible_user_id }}"
-#     mode: 0644

@@ -2,6 +2,7 @@
 - name: Set system defaults
   become_method: su
   become: yes
-  become_user: '{{ mac_admin_user }}'
+  become_user: '{{ admin_user }}'
   script: set-defaults.sh
   changed_when: false
+  when: ansible_os_family == "Darwin"

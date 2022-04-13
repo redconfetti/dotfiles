@@ -5,7 +5,7 @@
     - secrets.yml
   roles:
     - {role: package_manager, tags: ['package_manager']}
-    - {role: casks, tags: ['casks']}
+    - {role: desktop, tags: ['desktop']}
     - {role: cmdline, tags: ['cmdline']}
     - {role: git, tags: ['git']}
     - {role: lynx, tags: ['lynx']}

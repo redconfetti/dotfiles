@@ -4,6 +4,12 @@
     name: neovim
     state: present
   when: ansible_os_family == "Darwin"
+- name: Install neovim with apt
+  apt:
+    name: neovim
+    state: present
+  become: yes
+  when: ansible_os_family == "Debian"
 - name: create .config/nvim directory
   ansible.builtin.file:
     path: ~/.config/nvim

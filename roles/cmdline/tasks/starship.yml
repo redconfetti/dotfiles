@@ -3,39 +3,28 @@
   homebrew:
     name: starship
     state: present
+  when: ansible_os_family == "Darwin"
 - name: create .config directory
   ansible.builtin.file:
     path: ~/.config
     state: directory
     owner: "{{ ansible_user_id }}"
     mode: 0755
+  when: ansible_os_family == "Darwin"
 - name: configure startship toml
   template:
     src: config/starship.toml.j2
     dest: "~/.config/starship.toml"
     owner: "{{ ansible_user_id }}"
     mode: 0644
+  when: ansible_os_family == "Darwin"
 - name: Tap into homebrew/cask-fonts
   homebrew_tap:
     tap: homebrew/cask-fonts
     state: present
+  when: ansible_os_family == "Darwin"
 - name: Install Cousine Nerd-Font
   homebrew_cask:
     name: font-cousine-nerd-font
     state: present
-# - name: Install Terminess Nerd-Font
-#   homebrew_cask:
-#     name: font-terminess-ttf-nerd-font
-#     state: present
-# - name: Install 3270 Nerd-Font
-#   homebrew_cask:
-#     name: font-3270-nerd-font
-#     state: present
-# - name: Install SauceCodePro Nerd-Font
-#   homebrew_cask:
-#     name: font-sauce-code-pro-nerd-font
-#     state: present
-# - name: Install Fantasque Sans Mono Nerd-Font
-#   homebrew_cask:
-#     name: font-fantasque-sans-mono-nerd-font
-#     state: present
+  when: ansible_os_family == "Darwin"

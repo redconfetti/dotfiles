@@ -4,6 +4,12 @@
     name: lynx
     state: present
   when: ansible_os_family == "Darwin"
+- name: Install Lynx
+  apt:
+    name: lynx
+    state: present
+  become: yes
+  when: ansible_os_family == "Debian"
 - name: configure lynxrc
   template:
     src: lynxrc.j2
