@@ -5,6 +5,7 @@ Installs GUI applications for Mac OSX or Ubuntu
 * Mac OS X
   * [Firefox] - Web browser
   * [Slack] - Team communication and collaboration software
+  * [iTerm2] - Terminal emulator as alternative to Apple's Terminal app
   * [Zoom] - Video communication and virtual meeting platform
   * [Dash] - API documentation browser and code snippet manager
   * [Keycastr] - Open-source keystroke visualizer (used for presentations / webinars)
@@ -26,6 +27,7 @@ Installs GUI applications for Mac OSX or Ubuntu
 [Firefox]: https://formulae.brew.sh/cask/firefox#default
 [Slack]: https://formulae.brew.sh/cask/slack
 [Zoom]: https://formulae.brew.sh/cask/zoom
+[iTerm2]: https://formulae.brew.sh/cask/iterm2
 [Dash]: https://formulae.brew.sh/cask/dash
 [Keycastr]: https://formulae.brew.sh/cask/keycastr
 [VSCodium]: https://formulae.brew.sh/cask/vscodium

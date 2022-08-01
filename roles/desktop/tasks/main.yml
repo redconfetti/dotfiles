@@ -19,6 +19,12 @@
     name: zoom
     state: present
   when: ansible_os_family == "Darwin"
+- name: Install iTerm2
+  become: yes
+  homebrew_cask:
+    name: iterm2
+    state: present
+  when: ansible_os_family == "Darwin"
 - name: Install Dash
   become: yes
   homebrew_cask:
