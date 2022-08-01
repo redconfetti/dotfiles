@@ -2,14 +2,12 @@
 
 Installs GUI applications for Mac OSX or Ubuntu
 
-* Ubuntu
-  * [Brave] - Brave web browser
 * Mac OS X
   * [Firefox] - Web browser
   * [Slack] - Team communication and collaboration software
   * [Zoom] - Video communication and virtual meeting platform
   * [Dash] - API documentation browser and code snippet manager
-  * [Keycastr] - Open-source keystroke visualizer
+  * [Keycastr] - Open-source keystroke visualizer (used for presentations / webinars)
   * [VSCodium] - Binary releases of VS Code without MS branding/telemetry/licensing
   * [bestres] - Quickly change your screen resolution from the menubar
   * [devutils] - Offline toolbox for developers

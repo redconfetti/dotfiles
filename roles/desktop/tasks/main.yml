@@ -1,9 +1,4 @@
 ---
-- name: Install Brave
-  snap:
-    name: brave
-  become: yes
-  when: ansible_os_family == "Debian"
 - name: Install Firefox
   become: yes
   homebrew_cask:
@@ -63,11 +58,3 @@
     sudo_password: "{{ mac_admin_pass }}"
   become: yes
   when: ansible_os_family == "Darwin"
-# - name: Install mas
-#   homebrew: name=mas state=present
-# - name: Install Mac-App-Store-only apps with mas
-#   command: mas install {{item.id}}
-#   args:
-#     creates: "/Applications/{{item.name}}.app"
-#   with_items: '{{mac_mas_packages}}'
-#   tags: mas
