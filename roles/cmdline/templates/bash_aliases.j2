@@ -10,8 +10,8 @@ alias gc='git commit'
 alias gg='git grep'
 
 # Vim
-alias vim='nvim'
-alias vi='nvim'
+# alias vim='nvim'
+# alias vi='nvim'
 
 # Memcached
 alias flushmem="echo 'flush_all' | nc localhost 11211"
@@ -23,19 +23,4 @@ fi
 
 if [ -x ~/.rbenv/shims/bundle ]; then
   alias be='bundle exec'
-fi
-
-# htop
-if [ -x /usr/local/bin/htop ]; then
-  alias top='htop'
-fi
-
-# exa
-if [ -x /usr/local/bin/exa ]; then
-  alias ls='exa -gbH --header --git'
-fi
-
-# bat
-if [ -x /usr/local/bin/bat ]; then
-  alias cat='bat'
 fi

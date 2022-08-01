@@ -1,8 +1,5 @@
 ---
 - include_tasks: bash.yml
-- include_tasks: starship.yml
-- include_tasks: exa.yml
-- include_tasks: bat.yml
 - include_tasks: tldr.yml
 - include_tasks: misc.yml
 - include_tasks: uninstall.yml

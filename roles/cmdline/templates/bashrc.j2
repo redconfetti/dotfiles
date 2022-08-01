@@ -20,9 +20,6 @@
 # Load NodeJS Environment Settings
 [[ -s "$HOME/.bash_env_node" ]] && source "$HOME/.bash_env_node"
 
-# Load Cloud9 Environment Settings
-# [[ -s "$HOME/.bash_env_cloud9" ]] && source "$HOME/.bash_env_cloud9"
-
 # Homepage for Web Browsers
 export WWW_HOME=http://www.google.com/
 
@@ -34,18 +31,6 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export PS1="\[$(tput bold)\]\[$(tput setaf 2)\][\[$(tput setaf 1)\]\u\[$(tput setaf 0)\]@\[$(tput setaf 1)\]\h \[$(tput setaf 2)\]\W\[$(tput setaf 2)\]]\\$ \[$(tput sgr0)\]"
 
-# Set Starship config if present
-[[ -s "$HOME/.config/starship.toml" ]] && export STARSHIP_CONFIG=~/.config/starship.toml
-
-# Load Starship Shell if present
-if [ -x /usr/local/bin/starship ]; then
-  eval "$(starship init bash)"
-fi
-
-####################################################
-# Linux Only configuration
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  uname -a
 ####################################################
 # Mac Only configuration
 elif [[ "$OSTYPE" == "darwin"* ]]; then

@@ -3,13 +3,9 @@
 My prefered command line configuration.
 
 * [Bash] - Bourne-Again SHell, a UNIX command interpreter
-* [Starship] - customizable shell prompt
-* [Exa] - Modern replacement for 'ls'
-* [Bat] - Cat clone with wings
 * [TLDR] - Simplified and community-driven man pages
 * [htop] - Improved top (interactive process viewer)
 * [diff-so-fancy] - Good-lookin' diffs with diff-highlight and more
-* [jrnl] - Command-line note taker / journal
 * [tmux] -  terminal multiplexer
 * Consideration
   * [youtube-dl] - Download YouTube videos from the command-line
@@ -18,9 +14,6 @@ My prefered command line configuration.
   * [httpie] - User-friendly cURL replacement (command-line HTTP client)
 
 [Bash]: https://www.gnu.org/software/bash/
-[Starship]: https://starship.rs/
-[Exa]: https://the.exa.website/
-[Bat]: https://github.com/sharkdp/bat
 [TLDR]: https://tldr.sh/
 [htop]: https://htop.dev/
 [diff-so-fancy]: https://github.com/so-fancy/diff-so-fancy
