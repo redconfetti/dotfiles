@@ -8,7 +8,6 @@
     - {role: desktop, tags: ['desktop']}
     - {role: cmdline, tags: ['cmdline']}
     - {role: ssh, tags: ['ssh']}
-    - {role: git, tags: ['git']}
     - {role: lynx, tags: ['lynx']}
     - {role: imgcat, tags: ['imgcat']}
     - {role: ruby, tags: ['ruby']}

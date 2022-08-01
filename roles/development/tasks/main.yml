@@ -1,12 +1,70 @@
 ---
+# - debug: var=hostvars['local']['git_client_email']
+# - debug: var=hostvars['local']['git_client_name']
+- name: Install git with Homebrew
+  homebrew:
+    name: git
+    state: present
+  when: ansible_os_family == "Darwin"
+
+- name: Install git-lfs with Homebrew
+  homebrew:
+    name: git-lfs
+    state: present
+  when: ansible_os_family == "Darwin"
+
+- name: create ~/.ssh directory
+  ansible.builtin.file:
+    path: ~/.ssh
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    mode: 0755
+
+- name: generate ssh key pair
+  command : "ssh-keygen -q -t ed25519 -f ~/.ssh/id_ed25519 -C \"{{ git_client_email }}\" -N \"\""
+  args:
+    creates: "~/.ssh/id_ed25519"
+
+- name: Read SSH public key to authorize
+  shell: 'cat ~/.ssh/id_ed25519.pub'
+  register: ssh_pub_key
+
+- name: Authorize key with GitHub
+  local_action:
+    module: github_key
+    name: Development Laptop
+    token: '{{ github_personal_access_token }}'
+    pubkey: '{{ ssh_pub_key.stdout }}'
+
+- name: configure git
+  template:
+    src: gitconfig.j2
+    dest: "~/.gitconfig"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+
+- name: configure global gitignore
+  template:
+    src: gitignore_global.j2
+    dest: "~/.gitignore_global"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+
+- name: configure global gitattributes
+  template:
+    src: gitattributes_global.j2
+    dest: "~/.gitattributes_global"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+
 - name: create ~/Developer directory
   ansible.builtin.file:
     path: ~/Developer
     state: directory
     owner: "{{ ansible_user_id }}"
     mode: 0755
+
 - name: clone dev projects
-  become_user: app_calcentral
   ansible.builtin.git:
     repo: '{{ item.repo }}'
     dest: '~/Developer/{{ item.dir_name }}'
