@@ -1,0 +1,7 @@
+---
+- name: create ssh config
+  template:
+    src: config.j2
+    dest: "~/.ssh/config"
+    owner: "{{ ansible_user_id }}"
+    mode: 0644

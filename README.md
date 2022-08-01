@@ -16,6 +16,7 @@ There is a single playbook you can run against your local machine.
 ansible-playbook local_env.yml
 
 # Target specific roles by tags
+ansible-playbook local_env.yml --tags "ssh"
 ansible-playbook local_env.yml --tags "desktop"
 ansible-playbook local_env.yml --tags "cmdline"
 ansible-playbook local_env.yml --tags "development"
@@ -30,6 +31,7 @@ The following 'roles' perform the following tasks:
 - [cmdline] - Sets up Bash configuration, installs utilities (Starship, Exa, Bat,
   TLDR, htop)
 - [desktop] - Installs desktop applications
+- [ssh] - Configures SSH
 - git - Installs and configures Git
 - lynx - Installs and configures Lynx terminal browser
 - imgcat - Installs imgcat utility (used with iTerm2)
@@ -40,6 +42,7 @@ The following 'roles' perform the following tasks:
 - [macos] - Configures MacOS system with preferred configurations
 - development - Creates ~/Development directory and clones Github repositories
 
+[ssh]: roles/ssh/README.md
 [cmdline]: roles/cmdline/README.md
 [desktop]: roles/desktop/README.md
 [macos]: roles/macos/README.md
