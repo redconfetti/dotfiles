@@ -1,45 +1,50 @@
 ---
 - name: Install Firefox
-  become: yes
   homebrew_cask:
     name: firefox
     state: present
+    install_options: 'force,appdir=/Applications'
+    sudo_password: "{{ mac_admin_pass }}"
+    update_homebrew: yes
   when: ansible_os_family == "Darwin"
 - name: Install Slack
-  become: yes
   homebrew_cask:
     name: slack
     state: present
     install_options: 'force,appdir=/Applications'
     sudo_password: "{{ mac_admin_pass }}"
+    update_homebrew: yes
   when: ansible_os_family == "Darwin"
-- name: Install Zoom
-  become: yes
-  homebrew_cask:
-    name: zoom
-    state: present
-  when: ansible_os_family == "Darwin"
+# - name: Install Zoom
+#   become: yes
+#   homebrew_cask:
+#     name: zoom
+#     state: present
+#     install_options: 'force,appdir=/Applications'
+#     sudo_password: "{{ mac_admin_pass }}"
+#     update_homebrew: yes
+#   when: ansible_os_family == "Darwin"
 - name: Install iTerm2
-  become: yes
   homebrew_cask:
     name: iterm2
     state: present
+    update_homebrew: yes
   when: ansible_os_family == "Darwin"
 - name: Install Dash
-  become: yes
   homebrew_cask:
     name: dash
     state: present
     install_options: 'force,appdir=/Applications'
     sudo_password: "{{ mac_admin_pass }}"
+    update_homebrew: yes
   when: ansible_os_family == "Darwin"
 - name: Install VSCodium
-  become: yes
   homebrew_cask:
     name: vscodium
     state: present
     install_options: 'force,appdir=/Applications'
     sudo_password: "{{ mac_admin_pass }}"
+    update_homebrew: yes
   when: ansible_os_family == "Darwin"
 - name: Install keycastr
   homebrew_cask:
@@ -47,6 +52,7 @@
     state: present
     install_options: 'force,appdir=/Applications'
     sudo_password: "{{ mac_admin_pass }}"
+    update_homebrew: yes
   when: ansible_os_family == "Darwin"
 - name: Install bestres
   homebrew_cask:
@@ -54,7 +60,7 @@
     state: present
     install_options: 'force,appdir=/Applications'
     sudo_password: "{{ mac_admin_pass }}"
-  become: yes
+    update_homebrew: yes
   when: ansible_os_family == "Darwin"
 - name: Install devutils
   homebrew_cask:
@@ -62,5 +68,5 @@
     state: present
     install_options: 'force,appdir=/Applications'
     sudo_password: "{{ mac_admin_pass }}"
-  become: yes
+    update_homebrew: yes
   when: ansible_os_family == "Darwin"

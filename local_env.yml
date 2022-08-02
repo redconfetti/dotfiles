@@ -5,7 +5,6 @@
     - secrets.yml
   roles:
     - {role: package_manager, tags: ['package_manager']}
-    - {role: desktop, tags: ['desktop']}
     - {role: cmdline, tags: ['cmdline']}
     - {role: ssh, tags: ['ssh']}
     - {role: ruby, tags: ['ruby']}
@@ -14,4 +13,5 @@
     - {role: vscodium, tags: ['vscodium']}
     - {role: macos, tags: ['macos'], when: ansible_os_family == "Darwin"}
     - {role: development, tags: ['development']}
-
+    - {role: desktop, tags: ['desktop']}
+    - {role: docker, tags: ['docker']}

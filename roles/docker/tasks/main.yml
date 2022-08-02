@@ -1,0 +1,9 @@
+---
+- name: Install Docker Desktop
+  homebrew_cask:
+    name: docker
+    state: present
+    install_options: 'force,appdir=/Applications'
+    sudo_password: "{{ mac_admin_pass }}"
+    update_homebrew: yes
+  when: ansible_os_family == "Darwin"

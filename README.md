@@ -17,10 +17,11 @@ ansible-playbook local_env.yml
 
 # Target specific roles by tags
 ansible-playbook local_env.yml --tags "ssh"
-ansible-playbook local_env.yml --tags "desktop"
 ansible-playbook local_env.yml --tags "cmdline"
 ansible-playbook local_env.yml --tags "development"
 ansible-playbook local_env.yml --tags "vscodium"
+ansible-playbook local_env.yml --tags "desktop"
+ansible-playbook local_env.yml --tags "docker"
 ```
 
 ## Roles
