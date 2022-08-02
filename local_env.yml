@@ -9,7 +9,6 @@
     - {role: cmdline, tags: ['cmdline']}
     - {role: ssh, tags: ['ssh']}
     - {role: lynx, tags: ['lynx']}
-    - {role: imgcat, tags: ['imgcat']}
     - {role: ruby, tags: ['ruby']}
     - {role: nvim, tags: ['nvim']}
     - {role: node, tags: ['node']}

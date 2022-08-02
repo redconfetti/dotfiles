@@ -24,7 +24,7 @@ Installs GUI applications for Mac OSX or Ubuntu
 
 [Brave]: https://snapcraft.io/brave
 
-[Firefox]: https://formulae.brew.sh/cask/firefox#default
+[Firefox]: https://formulae.brew.sh/cask/firefox
 [Slack]: https://formulae.brew.sh/cask/slack
 [Zoom]: https://formulae.brew.sh/cask/zoom
 [iTerm2]: https://formulae.brew.sh/cask/iterm2
