@@ -19,3 +19,23 @@
     name: httpie
     state: absent
   when: ansible_os_family == "Darwin"
+- name: Uninstall htop
+  homebrew:
+    name: htop
+    state: absent
+  when: ansible_os_family == 'Darwin'
+- name: Uninstall diff-so-fancy
+  homebrew:
+    name: diff-so-fancy
+    state: absent
+  when: ansible_os_family == 'Darwin'
+- name: Uninstall tmate
+  homebrew:
+    name: tmate
+    state: absent
+  when: ansible_os_family == 'Darwin'
+- name: Uninstall jrnl
+  homebrew:
+    name: jrnl
+    state: absent
+  when: ansible_os_family == 'Darwin'

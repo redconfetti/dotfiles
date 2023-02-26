@@ -13,13 +13,19 @@ My personal command line environment. Inspired by [sloria/dotfiles].
 There is a single playbook you can run against your local machine.
 
 ```bash
+# Target all roles
 ansible-playbook local_env.yml
 
 # Target specific roles by tags
-ansible-playbook local_env.yml --tags "ssh"
+ansible-playbook local_env.yml --tags "package_manager"
 ansible-playbook local_env.yml --tags "cmdline"
-ansible-playbook local_env.yml --tags "development"
+ansible-playbook local_env.yml --tags "ssh"
+ansible-playbook local_env.yml --tags "ruby"
+ansible-playbook local_env.yml --tags "nvim"
+ansible-playbook local_env.yml --tags "node"
 ansible-playbook local_env.yml --tags "vscodium"
+ansible-playbook local_env.yml --tags "macos"
+ansible-playbook local_env.yml --tags "development"
 ansible-playbook local_env.yml --tags "desktop"
 ansible-playbook local_env.yml --tags "docker"
 ```
@@ -29,21 +35,20 @@ ansible-playbook local_env.yml --tags "docker"
 The following 'roles' perform the following tasks:
 
 - package_manager - Installs package manager specific to operating system
-- [cmdline] - Sets up Bash configuration, installs utilities (Starship, Exa, Bat,
-  TLDR, htop)
-- [desktop] - Installs desktop applications
+- [cmdline] - Sets up Bash configuration, installs utilities (Starship, Exa,
+  Bat, TLDR, htop)
 - [ssh] - Configures SSH
-- git - Installs and configures Git
-- lynx - Installs and configures Lynx terminal browser
-- imgcat - Installs imgcat utility (used with iTerm2)
-- ruby - Configures Ruby and related utilities (jRuby, Gem, Rspec)
-- nvim - Configures NeoVim
+- [ruby] - Configures Ruby and related utilities (jRuby, Gem, Rspec)
+- [nvim] - Configures NeoVim
 - node - Installs and configures NVM
-- vscode - Configures VScode
+- [vscodium] - Configures VSCodium
 - [macos] - Configures MacOS system with preferred configurations
-- development - Creates ~/Development directory and clones Github repositories
+- [development] - Creates ~/Development; install/configures Git, clones Github repos
+- [desktop] - Installs desktop applications
 
 [ssh]: roles/ssh/README.md
 [cmdline]: roles/cmdline/README.md
+[vscodium]: roles/vscodium/README.md
+[development]: roles/development/README.md
 [desktop]: roles/desktop/README.md
 [macos]: roles/macos/README.md

@@ -8,8 +8,8 @@
     - {role: cmdline, tags: ['cmdline']}
     - {role: ssh, tags: ['ssh']}
     - {role: ruby, tags: ['ruby']}
-    - {role: nvim, tags: ['nvim']}
-    - {role: node, tags: ['node']}
+    # - {role: nvim, tags: ['nvim']}
+    # - {role: node, tags: ['node']}
     - {role: vscodium, tags: ['vscodium']}
     - {role: macos, tags: ['macos'], when: ansible_os_family == "Darwin"}
     - {role: development, tags: ['development']}
