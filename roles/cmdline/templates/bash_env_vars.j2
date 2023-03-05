@@ -3,4 +3,9 @@ if [ -x /usr/local/bin/code ]; then
   export EDITOR="code --wait"
 fi
 
+# Use VSCodium as Editor
+if [ -x /usr/local/bin/codium ]; then
+  export EDITOR="codium --wait"
+fi
+
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
